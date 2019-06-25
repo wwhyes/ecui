@@ -1,0 +1,24 @@
+<div class="ecui-home__gift">
+    <div class="ecui-home__gift__bg">
+        <video width="1960" height="240" autoplay="ture" loop muted>
+            <source src="./common/video/home-gift.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="ecui-home__gift__bd">
+        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">50,520</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">120,522,321</span>在线Listing</p>
+        <p class="ecui-home__gift__desc">只需注册易仓刊登Listing账户，卖家即可在线管理eBay，Amazon，Wish，Aliexpress等平台商品 - 易仓刊登真正实现一套产品资料快速高效刊登至各大主流平台</p>
+        <a class="ecui-home__gift__btn" href="javascript:;">立即开始14天免费体验</a>
+    </div>
+</div>
+
+<script src="./common/js/jquery.leoTextAnimate.js"></script>
+<script>
+    $(window).on('scroll.cl.ecui-home__gift', function() {
+        var scrollTop = $(this).scrollTop()
+        var giftTop = $('.ecui-home__gift').offset().top - $(window).height();
+        if (scrollTop > giftTop) {
+            $(window).off('scroll.cl.ecui-home__gift')
+            $('.ecui-home__gift__numb').leoTextAnimate({delay: 200, autorun: true, fixed: [',',':','.'], start: '0'});
+        }
+    })
+</script>

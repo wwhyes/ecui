@@ -1,0 +1,73 @@
+<div class="ecui-home__platform-area">
+    <div class="ecui-home__platform-area__bg">
+        <img src="./common/img/home/home_platform_bg.png" alt="">
+    </div>
+    <div class="ecui-home__platform-area__hd">
+        <p class="ecui-home__platform-area__title">支持<span class="ecui-home__platform-area__numb">10+</span>平台，主流站点刊登</p>
+    </div>
+    <div class="ecui-home__platform-area__bd">
+        <div class="ecui-platform">
+            <div class="ecui-home__platform__panel">
+                <!-- point list -->
+            </div>
+            <div class="ecui-home__platform__nav">
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_01" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_02" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_03" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_04" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_05" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_06" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_07" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_08" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_09" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_10" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+    <div class="ecui-home__platform-area__ft">更多平台对接中......</div>
+</div>
+
+<script>
+    var pointList = [
+        [
+            { name: '加拿大', top: 52, left: 176 },
+            { name: '美国', top: 117, left:226 },
+            { name: '爱尔兰', top: 45, left: 450 },
+            { name: '英国', top: 56, left: 465 },
+            { name: '西班牙', top: 87, left: 479 },
+            { name: '比利时', top: 58, left: 496 },
+            { name: '意大利', top: 100, left: 523 },
+            { name: '法国', top: 76, left: 528 },
+            { name: '荷兰', top: 47, left: 536 },
+            { name: '德国', top: 65, left: 550 },
+            { name: '波兰', top: 56, left: 550 },
+            { name: '印度', top: 175, left: 706 },
+            { name: '马来西亚', top: 250, left: 787 },
+            { name: '新加坡', top: 266, left: 803 },
+            { name: '香港', top: 172, left: 815 },
+        ]
+    ]
+    $('.ecui-home__platform-area').on('click', '.ecui-home__platform__nav__item', function () {
+        $(this).addClass('ecui-home__platform__nav__item_active')
+            .siblings().removeClass('ecui-home__platform__nav__item_active')
+        
+        $('.ecui-home__platform__panel').html('')
+        $.each(pointList[$(this).index()] || [], function (index, item) {
+            $([
+                '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
+                    '<span class="ecui-home__platform__point__name">',
+                        item.name,
+                    '</span>',
+                    '<i class="ecui-home__platform__point__dot"></i>',
+                    '<i class="ecui-point ecui-point_1"></i>',
+                    '<i class="ecui-point ecui-point_4"></i>',
+                    '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
+                '</div>'
+            ].join(''))
+                .css({ top: item.top, left: item.left })
+                .appendTo($('.ecui-home__platform__panel'))
+        })
+        
+    })
+    .find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
+</script>

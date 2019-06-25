@@ -1,0 +1,25 @@
+<div class="ecui-toolbar">
+    <a class="ecui-toolbar__btn ecui-toolbar__btn_back-top js-back-top" href="javascript:;">
+        <span class="ecui-toolbar__btn__default ecui-icon-rocket"></span>
+        <span class="ecui-toolbar__btn__hover">返回顶部</span>
+    </a>
+</div>
+
+<script>
+    $(window).on('scroll', function(e) {
+        var scrollTop = $(this).scrollTop()
+        if (scrollTop > 100) {
+            $('.ecui-toolbar').addClass('ecui-toolbar_in')
+        } else {
+            $('.ecui-toolbar').removeClass('ecui-toolbar_in')
+        }
+    })
+    $('.js-back-top:not(.ecui-toolbar__btn_animation)').on('click', function() {
+        var $self = $(this)
+        $self.addClass('ecui-toolbar__btn_animation')
+        $("html,body").animate({ scrollTop: 0 }, 500);
+        setTimeout(function () {
+            $self.removeClass('ecui-toolbar__btn_animation')
+        }, 600)
+    })
+</script>

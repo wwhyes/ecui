@@ -1,0 +1,23 @@
+.ecui-titlebar__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ecui-titlebar__nav__item {
+    margin: 0 25px;
+    padding: 4px 8px;
+    display: inline-block;
+    color: inherit;
+    border-bottom: 3px solid transparent;
+    cursor: default;
+
+    a& {
+        cursor: pointer;
+    }
+}
+
+.ecui-titlebar__nav__item:hover,
+.ecui-titlebar__nav__item_active {
+    border-bottom-color: #fff;
+}

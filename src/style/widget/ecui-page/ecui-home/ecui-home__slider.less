@@ -1,0 +1,116 @@
+.ecui-slider {
+    position: relative;
+    background: #252936 url(../example/common/img/home/home_slider_bg.png) no-repeat center 0px;
+}
+
+.ecui-slider__wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    height: 500px;
+}
+
+.ecui-slider__item {
+    color: #fff;
+    position: relative;
+    display: none;
+}
+
+.ecui-slider__item_active {
+    display: block;
+}
+
+.ecui-slider__item__left {
+    width: 680px;
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+
+.ecui-slider__item__right {
+    position: absolute;
+    top: 140px;
+    right: 0;
+}
+
+.ecui-slider__item__title {
+    display: block;
+    font-size: 32px;
+}
+
+.ecui-slider__item__desc {
+    margin-top: 40px;
+    display: block;
+    font-size: 14px;
+}
+
+.ecui-slider__item__image-area {
+    margin-top: 30px;
+}
+
+.ecui-slider__item__btn-area {
+    margin-top: 30px;
+}
+
+.ecui-slider__item__btn {
+    display: inline-block;
+    width: 160px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 42px;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(90deg, #1DCBF2, #2065F0);
+
+    &::after {
+        content: ">>";
+        margin-left: 8px;
+        font-family: SimSun;
+    }
+}
+
+.ecui-slider__control {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.ecui-slider__control__point {
+    margin: 0 5px;
+    display: inline-block;
+
+    svg {
+        width: 14px;
+    }
+
+    path {
+        stroke: rgba(255,255,255,0.2);
+        stroke-dasharray: 282.783px 282.783px;
+        stroke-width: 10px;
+        fill-opacity: 0;
+        &:last-child {
+            stroke: rgba(255,255,255,1.0);
+            stroke-dashoffset: 282.783px;
+        }
+    }
+}
+
+.ecui-slider__progress {
+    path:last-child {
+        animation: progressAnimation 6000ms linear infinite;
+    }
+} 
+.ecui-slider__progress-active {
+    path:last-child {
+        stroke-dashoffset: 6px;
+    }
+}
+
+@keyframes progressAnimation {
+    from {
+        stroke-dashoffset: 282.783px;
+    }
+    to {
+        stroke-dashoffset: 6px;
+    }
+}

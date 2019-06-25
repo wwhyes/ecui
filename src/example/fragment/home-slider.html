@@ -1,0 +1,138 @@
+<div class="ecui-slider">
+    <div class="ecui-slider__wrapper">
+        <div class="ecui-slider__item">
+            <div class="ecui-slider__item__left">
+                <div class="ecui-slider__item__text-area">
+                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
+                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                </div>
+                <div class="ecui-slider__item__image-area">
+                    <img src="./common/img/home/platform_list.png" alt="">
+                </div>
+                <div class="ecui-slider__item__btn-area">
+                    <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
+                </div>
+            </div>
+            <div class="ecui-slider__item__right">
+                <img src="./common/img/home/slider_01.png" alt="">
+            </div>
+        </div>
+        <div class="ecui-slider__item">
+            <div class="ecui-slider__item__left">
+                <div class="ecui-slider__item__text-area">
+                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
+                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                </div>
+                <div class="ecui-slider__item__image-area">
+                    <img src="./common/img/home/platform_list.png" alt="">
+                </div>
+                <div class="ecui-slider__item__btn-area">
+                    <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
+                </div>
+            </div>
+            <div class="ecui-slider__item__right">
+                <img src="./common/img/home/slider_01.png" alt="">
+            </div>
+        </div>
+        <div class="ecui-slider__item">
+            <div class="ecui-slider__item__left">
+                <div class="ecui-slider__item__text-area">
+                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
+                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                </div>
+                <div class="ecui-slider__item__image-area">
+                    <img src="./common/img/home/platform_list.png" alt="">
+                </div>
+                <div class="ecui-slider__item__btn-area">
+                    <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
+                </div>
+            </div>
+            <div class="ecui-slider__item__right">
+                <img src="./common/img/home/slider_01.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="ecui-slider__control">
+        <a class="ecui-slider__control__point" href="javascript:;">
+            <svg viewBox="0 0 100 100">
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+            </svg>
+        </a>
+        <a class="ecui-slider__control__point" href="javascript:;">
+            <svg viewBox="0 0 100 100">
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+            </svg>
+        </a>
+        <a class="ecui-slider__control__point" href="javascript:;">
+            <svg viewBox="0 0 100 100">
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+                <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+<script>
+    var slider = function () {
+        var $element = $('.ecui-slider')
+        this.$slider = $('.ecui-slider__wrapper > .ecui-slider__item', $element)
+        this.$point = $('.ecui-slider__control > .ecui-slider__control__point', $element)
+        this.sliderLength = this.$slider.length
+        this.currentIndex = 0
+        this.switchSpeed = 6 // 自动播放间隔(s)
+        this.init()
+    }
+    slider.prototype = {
+        timer: null,
+        showItem: function (index) {
+            var self = this
+            var $currentSlider = this.$slider.eq(index)
+            var $currentPoint = this.$point.eq(index)
+
+            $currentSlider
+                .addClass('ecui-slider__item_active')
+                    .siblings()
+                    .removeClass('ecui-slider__item_active')
+
+            $currentSlider.find('.ecui-slider__item__left')
+                .css({ top: 200, opacity: 0 })
+                .stop(false,true)
+                .animate({ top: 120, opacity: 1 }, 600, 'swing')
+
+            $currentSlider.find('.ecui-slider__item__right')
+                .css({ top: 200, opacity: 0 })
+                .stop(false,true)
+                .animate({ top: 140, opacity: 1 }, 800, 'swing')
+
+
+            $currentPoint.addClass('ecui-slider__progress')
+                .siblings().removeClass('ecui-slider__progress')
+
+            this.currentIndex = index
+            this.timer = setTimeout(function() {
+                self.next()
+            }, this.switchSpeed * 1000)
+        },
+        next: function () {
+            var index = this.currentIndex + 1 > this.sliderLength - 1 ? 0 : this.currentIndex + 1
+            return this.showItem(index)
+        },
+        prev: function () {
+            return this.showItem(this.currentIndex - 1)
+        },
+        initEvent () {
+            var self = this
+            this.$point.on('click', function () {
+                var showIndex = $(this).index()
+                clearTimeout(self.timer)
+                self.showItem(showIndex)
+            })
+        },
+        init: function () {
+            this.initEvent()
+            this.showItem(0)
+        }
+    }
+    new slider()
+</script>

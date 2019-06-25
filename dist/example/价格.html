@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刊登系统（EC Listing）</title>
+    <link rel="stylesheet" href="../style/ecui.css">
+    <script src="./common/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 页头 -->
+    <header class="ecui-header ecui-header_fix">
+    <div class="ecui-container">
+        <div class="ecui-titlebar ecui-titlebar_default">
+            <div class="ecui-titlebar__hd">
+                <img src="./common/img/header/logo.png" alt="">
+                <div class="ecui-titlebar__title">刊登系统（EC Listing）</div>
+            </div>
+            <div class="ecui-titlebar__nav">
+                <a class="ecui-titlebar__nav__item" href="index.html">首页</a>
+                <div class="ecui-titlebar__nav__item">产品功能</div>
+                <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="javascript:;">价格</a>
+                <div class="ecui-titlebar__nav__item">帮助中心</div>
+            </div>
+            <div class="ecui-titlebar__other">
+                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登陆</a>
+                <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div style="height: 75px;"></div>
+
+    <!-- banner -->
+    <div class="ecui-home__banner">
+    <div class="ecui-home__banner__bg">
+        <img src="./common/img/home/home_banner.png" alt="">
+    </div>
+    <div class="ecui-home__banner__bd">
+        <div class="ecui-home__banner__text-area">
+            <p class="ecui-home__banner__title">易仓刊登系统（EC Listing）</p>
+            <p class="ecui-home__banner__desc">免费14天全功能试用</p>
+        </div>
+        <div class="ecui-home__banner__btn-area">
+            <a class="ecui-home__banner__btn" href="javascript:;">立即免费体验</a>
+        </div>
+    </div>
+</div>
+
+    <!-- price-main -->
+    <div class="ecui-tab">
+    <ul class="ecui-tab__nav">
+        <li class="ecui-tab__nav__item ecui-tab__nav__item_active">
+            <a href="javascript:;">刊登套餐服务</a>
+        </li>
+        <li class="ecui-tab__nav__item">
+            <a href="javascript:;">爆款开发引擎套餐</a>
+        </li>
+    </ul>
+    <div class="ecui-container">
+        <!-- 刊登套餐服务 -->
+        <div class="ecui-tab__page ecui-tab__page_in">
+            <div class="ecui-flex">
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_1">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">免费版（14天）</p>
+                            <p class="ecui-home__package__desc">(适用企业：不限)</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__free">免费</p>
+                            </div>
+                        </div>
+
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即注册</a>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>套餐额度</p>
+                            <ul class="ecui-home__package__list">
+                                <li>在线Listing <span class="ecui-text-highlight">1,000</span> 个</li>
+                                <li><span class="ecui-text-highlight">1</span> 个店铺数/平台限制</li>
+                                <li><span class="ecui-text-highlight">2</span> 个用户数</li>
+                                <li><span class="ecui-text-highlight">300</span> M 图片空间</li>
+                                <li>图片空间扩容 <span class="ecui-text-highlight">￥55</span> G/月/元</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>刊登平台</p>
+                            <ul class="ecui-home__package__platform-list">
+                                <li class="ecui-home__package__platform ecui-home__package__platform_ebay"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_amazeon"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_wish"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_lazada"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_shopee"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_joom"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_fyndip"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_likeshop"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_walmart"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_alobom"></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>精品应用</p>
+                            <ul class="ecui-home__package__list">
+                                <li>一键翻译 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay关联营销 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay自动补货 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay自动重复刊登 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>刊登模板 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>产品搬家 <span class="ecui-text-highlight">(限免)</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>产品采集</p>
+                            <ul class="ecui-home__package__list">
+                                <li>易仓盒子</li>
+                                <li>爆款开发(免费采集10个产品)<br><br></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>客服服务</p>
+                            <ul class="ecui-home__package__list">
+                                <li>仅支持工单客服<br><br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_2">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">基础版</p>
+                            <p class="ecui-home__package__desc">(适用企业：小型)</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">9,999</span>元/年
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即购买</a>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>套餐额度</p>
+                            <ul class="ecui-home__package__list">
+                                <li>在线Listing <span class="ecui-text-highlight">5,000</span> 个</li>
+                                <li><span class="ecui-text-highlight">200</span> 个店铺数/平台限制</li>
+                                <li><span class="ecui-text-highlight">不限</span> 用户数</li>
+                                <li><span class="ecui-text-highlight">10</span> G 图片空间</li>
+                                <li>图片空间扩容 <span class="ecui-text-highlight">￥50</span> G/月/元</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>刊登平台</p>
+                            <ul class="ecui-home__package__platform-list">
+                                <li class="ecui-home__package__platform ecui-home__package__platform_ebay"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_amazeon"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_wish"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_lazada"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_shopee"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_joom"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_fyndip"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_likeshop"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_walmart">
+                                    <span class="ecui-home__package__platform__tag"></span>
+                                </li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_alobom">
+                                    <span class="ecui-home__package__platform__tag"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>精品应用</p>
+                            <ul class="ecui-home__package__list">
+                                <li>一键翻译 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay关联营销 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay自动补货 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay自动重复刊登 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>刊登模板 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>产品搬家 <span class="ecui-text-highlight">(限免)</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>产品采集</p>
+                            <ul class="ecui-home__package__list">
+                                <li>易仓盒子</li>
+                                <li>
+                                    爆款开发(免费采集10个产品)
+                                    <br><span class="ecui-text-link">付费开通</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>客服服务</p>
+                            <ul class="ecui-home__package__list">
+                                <li>
+                                    <span class="ecui-text-link">在线支持<br><br></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_3">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">免费版（14天）</p>
+                            <p class="ecui-home__package__desc">(适用企业：不限)</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">19,999</span>元/年
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即购买</a>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>套餐额度</p>
+                            <ul class="ecui-home__package__list">
+                                <li>在线Listing <span class="ecui-text-highlight">100,000</span> 个</li>
+                                <li><span class="ecui-text-highlight">不限</span> 店铺数/平台限制</li>
+                                <li><span class="ecui-text-highlight">不限</span> 用户数</li>
+                                <li><span class="ecui-text-highlight">20</span> G 图片空间</li>
+                                <li>图片空间扩容 <span class="ecui-text-highlight">￥45</span> G/月/元</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>刊登平台</p>
+                            <ul class="ecui-home__package__platform-list">
+                                <li class="ecui-home__package__platform ecui-home__package__platform_ebay"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_amazeon"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_wish"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_lazada"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_shopee"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_joom"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_fyndip"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_likeshop"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_walmart"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_alobom"></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>精品应用</p>
+                            <ul class="ecui-home__package__list">
+                                <li>一键翻译 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay关联营销</li>
+                                <li>eBay自动补货</li>
+                                <li>eBay自动重复刊登</li>
+                                <li>刊登模版</li>
+                                <li>产品搬家</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>产品采集</p>
+                            <ul class="ecui-home__package__list">
+                                <li>易仓盒子</li>
+                                <li>
+                                    爆款开发(免费采集10个产品)
+                                    <br><span class="ecui-text-link">付费开通</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>客服服务</p>
+                            <ul class="ecui-home__package__list">
+                                <li>
+                                    <span class="ecui-text-link">在线支持<br><br></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_4">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">免费版（14天）</p>
+                            <p class="ecui-home__package__desc">(适用企业：不限)</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">39,999</span>元/年
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即购买</a>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>套餐额度</p>
+                            <ul class="ecui-home__package__list">
+                                <li>在线Listing <span class="ecui-text-highlight">300,000</span> 个</li>
+                                <li><span class="ecui-text-highlight">不限</span> 店铺数/平台限制</li>
+                                <li><span class="ecui-text-highlight">不限</span> 用户数</li>
+                                <li><span class="ecui-text-highlight">50</span> G 图片空间</li>
+                                <li>图片空间扩容 <span class="ecui-text-highlight">￥35</span> G/月/元</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>刊登平台</p>
+                            <ul class="ecui-home__package__platform-list">
+                                <li class="ecui-home__package__platform ecui-home__package__platform_ebay"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_amazeon"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_wish"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_lazada"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_shopee"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_joom"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_fyndip"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_likeshop"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_walmart"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_alobom"></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>精品应用</p>
+                            <ul class="ecui-home__package__list">
+                                <li>一键翻译 <span class="ecui-text-highlight">(限免)</span></li>
+                                <li>eBay关联营销</li>
+                                <li>eBay自动补货</li>
+                                <li>eBay自动重复刊登</li>
+                                <li>刊登模版</li>
+                                <li>产品搬家</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>产品采集</p>
+                            <ul class="ecui-home__package__list">
+                                <li>易仓盒子</li>
+                                <li>
+                                    爆款开发(免费采集10个产品)
+                                    <br><span class="ecui-text-link">付费开通</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>客服服务</p>
+                            <ul class="ecui-home__package__list">
+                                <li>
+                                    <span class="ecui-text-link">在线/电话支持</span>
+                                </li>
+                                <li>专属客服经理</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_5">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">定制版</p>
+                            <p class="ecui-home__package__desc">(适用企业：大型)</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">企业版+服务器+图片空间+单独部署费用</p>
+                            </div>
+                        </div>
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">详询销售</a>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>套餐额度</p>
+                            <ul class="ecui-home__package__list">
+                                <li>在线Listing <span class="ecui-text-highlight">不限</span></li>
+                                <li><span class="ecui-text-highlight">不限</span> 店铺数/平台限制</li>
+                                <li><span class="ecui-text-highlight">不限</span> 用户数</li>
+                                <li>图片空间 <span class="ecui-text-link">详询销售</span></li>
+                                <li>图片空间扩容 <span class="ecui-text-link">详询销售</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>刊登平台</p>
+                            <ul class="ecui-home__package__platform-list">
+                                <li class="ecui-home__package__platform ecui-home__package__platform_ebay"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_amazeon"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_wish"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_lazada"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_shopee"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_joom"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_fyndip"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_likeshop"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_walmart"></li>
+                                <li class="ecui-home__package__platform ecui-home__package__platform_alobom"></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>精品应用</p>
+                            <ul class="ecui-home__package__list">
+                                <li>一键翻译 <span class="ecui-text-link">详询销售</span></li>
+                                <li>eBay关联营销</li>
+                                <li>eBay自动补货</li>
+                                <li>eBay自动重复刊登</li>
+                                <li>刊登模版</li>
+                                <li>产品搬家</li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>产品采集</p>
+                            <ul class="ecui-home__package__list">
+                                <li>易仓盒子</li>
+                                <li>
+                                    爆款开发
+                                    <br><span class="ecui-text-link">详询销售</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p>客服服务</p>
+                            <ul class="ecui-home__package__list">
+                                <li>
+                                    <span class="ecui-text-link">在线/电话支持</span>
+                                </li>
+                                <li>专属客服经理</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 爆款开发引擎套餐 -->
+        <div class="ecui-tab__page">
+            <div class="ecui-flex">
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_1">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">Amazeon版本</p>
+                            <p class="ecui-home__package__desc">爬虫批量采集+大数据分析</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">29,999</span>元/年
+                                    <br>
+                                    <small>每月价格：￥3,000 元/年</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p class="ecui-text-justify">
+                                <span class="ecui-inline-block ecui-align-middle">采集平台：</span>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_amazeon"></i>
+                            </p>
+                            <ul class="ecui-home__package__list">
+                                <li>产品采集数量（个/月）<span class="ecui-text-highlight ecui-float-right">8,000</span></li>
+                                <li>产品采集数量（个/年）<span class="ecui-text-highlight ecui-float-right">100,000</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即开通</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_2">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">eBay版本</p>
+                            <p class="ecui-home__package__desc">爬虫批量采集+大数据分析</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">29,999</span>元/年
+                                    <br>
+                                    <small>每月价格：￥3,000 元/年</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p class="ecui-text-justify">
+                                <span class="ecui-inline-block ecui-align-middle">采集平台：</span>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_ebay"></i>
+                            </p>
+                            <ul class="ecui-home__package__list">
+                                <li>产品采集数量（个/月）<span class="ecui-text-highlight ecui-float-right">8,000</span></li>
+                                <li>产品采集数量（个/年）<span class="ecui-text-highlight ecui-float-right">100,000</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即开通</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecui-flex__item">
+                    <div class="ecui-home__package ecui-home__package_3">
+                        <div class="ecui-home__package__hd">
+                            <p class="ecui-home__package__title">全版本</p>
+                            <p class="ecui-home__package__desc">爬虫批量采集+大数据分析</p>
+                            <div class="ecui-home__package__price">
+                                <p class="ecui-home__package__price__label">
+                                    <span class="ecui-home__package__price__numb">50,000</span>元/年
+                                    <br>
+                                    <small>每月价格：￥5,000 元/年</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ecui-home__package__bd">
+                            <p class="ecui-text-justify">
+                                <span class="ecui-inline-block ecui-align-middle">采集平台：</span>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_ebay"></i>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_amazeon"></i>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_wish"></i>
+                                <i class="ecui-home__package__platform ecui-home__package__platform_aliexpress"></i>
+                            </p>
+                            <ul class="ecui-home__package__list">
+                                <li>产品采集数量（个/月）<span class="ecui-text-highlight ecui-float-right">8,000</span></li>
+                                <li>产品采集数量（个/年）<span class="ecui-text-highlight ecui-float-right">100,000</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="ecui-home__package__btn-area">
+                            <a class="ecui-home__package__btn" href="javascript:;">立即开通</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.ecui-tab').on('click', '.ecui-tab__nav__item', function () {
+        var index = $(this).index()
+
+        $(this).addClass('ecui-tab__nav__item_active')
+            .siblings().removeClass('ecui-tab__nav__item_active')
+
+        $('.ecui-tab__page', '.ecui-tab')
+            .eq(index).addClass('ecui-tab__page_in')
+            .siblings().removeClass('ecui-tab__page_in')
+    })
+</script>
+
+    <!-- 功能清单 -->
+    <div class="ecui-container">
+    <div class="ecui-home__panel">
+        <div class="ecui-home__panel__hd">
+            <p class="ecui-home__panel__title">功能清单</p>
+        </div>
+        <div class="ecui-home__panel__bd">
+            <table class="ecui-home__table ecui-home__table_border">
+                <thead>
+                    <tr class="ecui-bg-active">
+                        <th width="100" align="center">分类</th>
+                        <th width="160" align="center">模块</th>
+                        <th width="160" align="center">功能名称</th>
+                        <th>功能详情</th>
+                    </tr>
+                </thead>
+
+                <!-- 产品库 -->
+                <tbody>
+                    <tr>
+                        <td align="center" rowspan="10">
+                            <h3>产<br>品<br>库</h3>
+                        </td>
+                        <td align="center" rowspan="4">产品管理</td>
+                        <td align="center">爆款开发</td>
+                        <td>从各平台爬取筛选出的产品</td>
+                    </tr>
+                    <tr>
+                        <td align="center">易仓盒子</td>
+                        <td>从货源对接平台采集产品</td>
+                    </tr>
+                    <tr>
+                        <td align="center">产品库</td>
+                        <td>所有来源产品资料的汇总</td>
+                    </tr>
+                    <tr>
+                        <td align="center">产品映射</td>
+                        <td>维护产品SKU和平台SKU的对应关系</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="3">导入/导出</td>
+                        <td align="center">导入产品</td>
+                        <td>批量导入产品</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">导出模板设置</td>
+                        <td>自定义导出模板</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">下载产品报告</td>
+                        <td>下载已按导出模板汇总的产品数据</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="3">设置</td>
+                        <td align="center">自定义属性</td>
+                        <td>维护产品资料中自定义属性</td>
+                    </tr>
+                    <tr>
+                        <td align="center">系统分类</td>
+                        <td>维护产品的系统分类</td>
+                    </tr>
+                    <tr>
+                        <td align="center">货源账号授权</td>
+                        <td>授权要进行产品采集的平台账号</td>
+                    </tr>
+                </tbody>
+
+                <!-- 平台 -->
+                <tbody>
+                    <tr>
+                        <td align="center" rowspan="33">平<br>台</td>
+                        <td class="ecui-bg-active" align="center" rowspan="6">
+                            <img src="./common/img/home/platform_ebay.png" alt="ebay">
+                        </td>
+                        <td class="ecui-bg-active" align="center">常用组合</td>
+                        <td class="ecui-bg-active">配件兼容列表、物品所在地、买家要求、不运送地区、运送选项、退货政策、付款政策、卖家描述、关联营销、描述模板</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">常用模板</td>
+                        <td>描述模板设置、刊登模板、折扣模板</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">刊登管理</td>
+                        <td>eBay草稿、eBay商品（产品搬家）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">工具</td>
+                        <td>广告活动、折扣日程管理、刊登日程管理（定时发布）、议价、自动规则（自动补货、自动重新刊登、自动调价）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">统计</td>
+                        <td>eBay刊登、eBay Item转化率</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、paypal关联</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="4">
+                            <img src="./common/img/home/platform_aliexpress.png" alt="aliexpress">
+                        </td>
+                        <td align="center">常用模板</td>
+                        <td>运费模板、服务模板、信息模板、刊登模板</td>
+                    </tr>
+                    <tr>
+                        <td align="center">刊登管理</td>
+                        <td>Aliexpress草稿、Aliexpress商品（产品搬家）</td>
+                    </tr>
+                    <tr>
+                        <td align="center">工具</td>
+                        <td>图片银行、刊登日程管理（定时发布）</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、延长有效期设置</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="4">
+                            <img src="./common/img/home/platform_wish.png" alt="wish">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>WISH草稿、WISH商品（产品搬家）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">统计</td>
+                        <td>WISH刊登</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">工具</td>
+                        <td>广告活动、刊登日程管理（定时发布）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、配送设置、仓库管理、运费模板、刊登模板</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="3">
+                            <img src="./common/img/home/platform_amazon.png" alt="amazon">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Amazon草稿、Amazon商品（产品搬家）、Amazon待审核、批量上传</td>
+                    </tr>
+                    <tr>
+                        <td align="center">工具</td>
+                        <td>刊登日程管理（定时发布）</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、品牌备案设置、Amazon设置、刊登模板</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_lazada.png" alt="lazada">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Lazada草稿、Lazada商品（产品搬家）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、刊登模板（定时发布）</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_shopee.png" alt="shopee">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Shopee草稿、Shopee商品（产品搬家）</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权、刊登模板（定时发布）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_joom.png" alt="joom">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Joom草稿、Joom商品（产品搬家）</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_walmart.png" alt="walmart">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Walmart草稿、Walmart商品</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_fyndip.png" alt="fyndip">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Fyndiq草稿、Fyndiq商品</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="2">
+                            <img src="./common/img/home/platform_alobom.png" alt="alobom">
+                        </td>
+                        <td align="center">刊登管理</td>
+                        <td>Alabom草稿、Alabom商品</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center" rowspan="2">独立站</td>
+                        <td align="center">刊登管理</td>
+                        <td>LIKESHOP草稿、LIKESHOP商品</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="2">自定义平台</td>
+                        <td align="center">产品管理</td>
+                        <td>平台草稿、平台商品</td>
+                    </tr>
+                    <tr>
+                        <td align="center">设置</td>
+                        <td>店铺账号授权</td>
+                    </tr>
+                </tbody>
+
+                <!-- 其他 -->
+                <tbody>
+                    <tr>
+                        <td align="center" rowspan="6">其<br>他</td>
+                        <td class="ecui-bg-active" align="center" rowspan="2">图片库</td>
+                        <td class="ecui-bg-active" align="center">图片分类</td>
+                        <td class="ecui-bg-active">维护图片分类</td>
+                    </tr>
+                    <tr class="ecui-bg-active">
+                        <td align="center">图片中心</td>
+                        <td>图片快速匹配</td>
+                    </tr>
+                    <tr>
+                        <td align="center" rowspan="4">系统管理</td>
+                        <td align="center">基础数据</td>
+                        <td>国家管理、国家分类、货币管理</td>
+                    </tr>
+                    <tr>
+                        <td align="center">平台设置</td>
+                        <td>产品ID号码池、SKU生成规则、平台语言设置、售价计算规则、自定义标签</td>
+                    </tr>
+                    <tr>
+                        <td align="center">用户设置</td>
+                        <td>用户中心、用户店铺权限</td>
+                    </tr>
+                    <tr>
+                        <td align="center">系统配置</td>
+                        <td>系统配置、水印设置</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <!-- 常见问题 -->
+    <div class="ecui-container">
+    <div class="ecui-home__panel">
+        <div class="ecui-home__panel__hd">
+            <p class="ecui-home__panel__title">常见问题</p>
+        </div>
+        <div class="ecui-home__panel__bd">
+            <div class="ecui-home__question ecui-float-left">
+                <p class="ecui-home__question__title">Q：试用期是否需要额外付费？</p>
+                <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
+                <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
+                <p class="ecui-home__question__title">Q：试用到期会如何？</p>
+                <p class="ecui-home__question__answer">14天试用到期后，数据都将安全保留，充值付费后可以继续使用。</p>
+            </div>
+            <div class="ecui-home__question ecui-float-right">
+                <p class="ecui-home__question__title">Q：图片空间的图片存储在哪？</p>
+                <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
+                <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
+                <p class="ecui-home__question__title">Q：购买爆款开发引擎套餐有什么优惠？</p>
+                <p class="ecui-home__question__answer">按年支付较按月支付可省￥6001，开通全版本更划算。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 推广 -->
+    <div class="ecui-home__gift">
+    <div class="ecui-home__gift__bg">
+        <video width="1960" height="240" autoplay="ture" loop muted>
+            <source src="./common/video/home-gift.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="ecui-home__gift__bd">
+        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">50,520</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">120,522,321</span>在线Listing</p>
+        <p class="ecui-home__gift__desc">只需注册易仓刊登Listing账户，卖家即可在线管理eBay，Amazon，Wish，Aliexpress等平台商品 - 易仓刊登真正实现一套产品资料快速高效刊登至各大主流平台</p>
+        <a class="ecui-home__gift__btn" href="javascript:;">立即开始14天免费体验</a>
+    </div>
+</div>
+
+<script src="./common/js/jquery.leoTextAnimate.js"></script>
+<script>
+    $(window).on('scroll.cl.ecui-home__gift', function() {
+        var scrollTop = $(this).scrollTop()
+        var giftTop = $('.ecui-home__gift').offset().top - $(window).height();
+        if (scrollTop > giftTop) {
+            $(window).off('scroll.cl.ecui-home__gift')
+            $('.ecui-home__gift__numb').leoTextAnimate({delay: 200, autorun: true, fixed: [',',':','.'], start: '0'});
+        }
+    })
+</script>
+
+    <!-- 页脚 -->
+    <footer class="ecui-footer">
+    <div class="ecui-container">
+        <div class="ecui-flex ecui-flex_align-center">
+            <div class="ecui-footer__info">
+                <div class="ecui-footer__info__hd">
+                    <strong class="ecui-footer__info__title">关于易仓刊登Listing</strong>
+                </div>
+                <div class="ecui-footer__info__bd">
+                    <p class="ecui-footer__info__desc">深圳市易仓科技有限公司一直致力于研发高效可控的跨境管理模式。精研跨境电商ERP、国际物流TMS、海外仓WMS和刊登Listing等管理系统。刊登Listing打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。</p>
+                </div>
+            </div>
+            <div class="ecui-flex__item">
+                <div class="ecui-footer__info">
+                    <div class="ecui-footer__info__hd">
+                        <strong class="ecui-footer__info__title">联系我们</strong>
+                    </div>
+                    <div class="ecui-footer__info__bd">
+                        <div class="ecui-footer__media-box ecui-float-left ecui-mb-10">
+                            <div class="ecui-footer__media-box__hd">
+                                <img class="ecui-footer__media-box__thumb" src="./common/img/footer/icon_footer_tel.png" alt="">
+                            </div>
+                            <div class="ecui-footer__media-box__bd">
+                                <p class="ecui-footer__media-box__title">固定电话</p>
+                                <p class="ecui-footer__media-box__desc">0755-86528003</p>
+                            </div>
+                        </div>
+                        <div class="ecui-footer__media-box ecui-float-right ecui-mb-10">
+                            <div class="ecui-footer__media-box__hd">
+                                <img class="ecui-footer__media-box__thumb" src="./common/img/footer/icon_footer_qq.png" alt="">
+                            </div>
+                            <div class="ecui-footer__media-box__bd">
+                                <p class="ecui-footer__media-box__title">QQ</p>
+                                <p class="ecui-footer__media-box__desc">3388134103</p>
+                            </div>
+                        </div>
+                        <div class="ecui-footer__media-box ecui-float-left">
+                            <div class="ecui-footer__media-box__hd">
+                                <img class="ecui-footer__media-box__thumb" src="./common/img/footer/icon_footer_clock.png" alt="">
+                            </div>
+                            <div class="ecui-footer__media-box__bd">
+                                <p class="ecui-footer__media-box__title">手机&微信</p>
+                                <p class="ecui-footer__media-box__desc">158-6816-0577</p>
+                            </div>
+                        </div>
+                        <div class="ecui-footer__media-box ecui-float-right">
+                            <div class="ecui-footer__media-box__hd">
+                                <img class="ecui-footer__media-box__thumb" src="./common/img/footer/icon_footer_email.png" alt="">
+                            </div>
+                            <div class="ecui-footer__media-box__bd">
+                                <p class="ecui-footer__media-box__title">邮箱</p>
+                                <p class="ecui-footer__media-box__desc">hb@eccang.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ecui-footer__qrcode">
+                <img src="./common/img/footer/qrcode.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="ecui-footer__miscs">
+        <p>Copyright 2013©深圳易仓科技有限公司.All Rights Reserved</p>
+        <a href="javascript:;">粤ICP备13020851号</a>
+    </div>
+</footer>
+
+    <!-- 返回顶部 -->
+    <div class="ecui-toolbar">
+    <a class="ecui-toolbar__btn ecui-toolbar__btn_back-top js-back-top" href="javascript:;">
+        <span class="ecui-toolbar__btn__default ecui-icon-rocket"></span>
+        <span class="ecui-toolbar__btn__hover">返回顶部</span>
+    </a>
+</div>
+
+<script>
+    $(window).on('scroll', function(e) {
+        var scrollTop = $(this).scrollTop()
+        if (scrollTop > 100) {
+            $('.ecui-toolbar').addClass('ecui-toolbar_in')
+        } else {
+            $('.ecui-toolbar').removeClass('ecui-toolbar_in')
+        }
+    })
+    $('.js-back-top:not(.ecui-toolbar__btn_animation)').on('click', function() {
+        var $self = $(this)
+        $self.addClass('ecui-toolbar__btn_animation')
+        $("html,body").animate({ scrollTop: 0 }, 500);
+        setTimeout(function () {
+            $self.removeClass('ecui-toolbar__btn_animation')
+        }, 600)
+    })
+</script>
+</body>
+</html>
