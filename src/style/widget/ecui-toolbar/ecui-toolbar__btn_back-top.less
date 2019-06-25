@@ -1,0 +1,50 @@
+.ecui-toolbar__btn_back-top {
+    &.ecui-toolbar__btn_animation {
+        background-color: #00A4FF;
+        color: #fff;
+
+        &, &:hover {
+            .ecui-toolbar__btn__default,
+            .ecui-toolbar__btn__hover {
+                display: inline-block;
+            }
+        }
+
+        .ecui-toolbar__btn__default {
+            margin-left: -20px;
+            color: #00A4FF;
+            opacity: 0;
+            position: absolute;
+            top: -48px;
+            left: 50%;
+            animation-name: rocket;
+            animation-duration: 600ms;
+            animation-timing-function: ease-out;
+            animation-delay: 0;
+        }
+    }
+
+    .ecui-toolbar__btn__default {
+        font-size: 28px;
+    }
+
+    .ecui-toolbar__btn__hover {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@keyframes rocket {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    5%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

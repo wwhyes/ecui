@@ -1,0 +1,34 @@
+.ecui-toolbar__btn {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    color: #00A4FF;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+
+    &:hover {
+        background-color: #00A4FF;
+        color: #fff;
+    }
+}
+
+.ecui-toolbar__btn__default {
+    display: inline-block;
+
+    .ecui-toolbar__btn:hover & {
+        display: none;
+    }
+}
+
+.ecui-toolbar__btn__hover {
+    display: none;
+
+    .ecui-toolbar__btn:hover & {
+        display: inline-block;
+    }
+}
+
+@import "./ecui-toolbar__btn_back-top";

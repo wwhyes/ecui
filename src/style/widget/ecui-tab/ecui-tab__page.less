@@ -1,0 +1,32 @@
+.ecui-tab__page {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    float: left;
+    width: 100%;
+    padding: 10px 10px 15px;
+    visibility: hidden;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s,-webkit-transform .3s;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    box-sizing: border-box;
+
+    .ecui-tab__page_in ~ & {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+.ecui-tab__page_in {
+    position: relative;
+    z-index: 100;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
