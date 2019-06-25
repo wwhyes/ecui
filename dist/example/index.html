@@ -9,8 +9,8 @@
     <script src="./common/js/jquery.min.js"></script>
 </head>
 <body ontouchstart>
-    <!-- 页头 -->
-    <header class="ecui-header ecui-header_transparent ecui-header_fix">
+<!-- 页头 -->
+<header class="ecui-header ecui-header_transparent ecui-header_fix">
     <div class="ecui-container">
         <div class="ecui-titlebar">
             <div class="ecui-titlebar__hd">
@@ -19,12 +19,12 @@
             </div>
             <div class="ecui-titlebar__nav">
                 <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="index.html">首页</a>
-                <div class="ecui-titlebar__nav__item">产品功能</div>
+                <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
                 <a class="ecui-titlebar__nav__item" href="价格.html">价格</a>
                 <div class="ecui-titlebar__nav__item">帮助中心</div>
             </div>
             <div class="ecui-titlebar__other">
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登陆</a>
+                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
                 <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
             </div>
         </div>
@@ -34,16 +34,25 @@
 <script>
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop()
+        var mainScrollTop = $('#main').offset().top
         if (scrollTop === 0) {
             $('.ecui-header_fix').removeAttr('style')
         } else {
             $('.ecui-header_fix').css('background', '#242a37')
         }
+
+        if (scrollTop >= mainScrollTop - 75) {
+            $('.ecui-titlebar__nav__item').eq(1).addClass('ecui-titlebar__nav__item_active')
+                .siblings().removeClass('ecui-titlebar__nav__item_active')
+        } else {
+            $('.ecui-titlebar__nav__item').eq(0).addClass('ecui-titlebar__nav__item_active')
+                .siblings().removeClass('ecui-titlebar__nav__item_active')
+        }
     })
 </script>
 
-    <!-- 轮播图 -->
-    <div class="ecui-slider">
+<!-- 轮播图 -->
+<div class="ecui-slider">
     <div class="ecui-slider__wrapper">
         <div class="ecui-slider__item">
             <div class="ecui-slider__item__left">
@@ -52,7 +61,7 @@
                     <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_01_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
@@ -65,35 +74,35 @@
         <div class="ecui-slider__item">
             <div class="ecui-slider__item__left">
                 <div class="ecui-slider__item__text-area">
-                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
-                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                    <strong class="ecui-slider__item__title">爆款开发引擎</strong>
+                    <p class="ecui-slider__item__desc">易仓爆款开发引擎，是一款集数据采集、货源匹配、翻译转换、快速刊登于一体的爆款开发软件，专门为跨境电商卖家高效完成销售渠道铺货而精心打造，能高效发现蓝海产品、快速打造爆款、迅速铺货新平台。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_02_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
                 </div>
             </div>
             <div class="ecui-slider__item__right">
-                <img src="./common/img/home/slider_01.png" alt="">
+                <img src="./common/img/home/slider_02.png" alt="">
             </div>
         </div>
         <div class="ecui-slider__item">
             <div class="ecui-slider__item__left">
                 <div class="ecui-slider__item__text-area">
-                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
-                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                    <strong class="ecui-slider__item__title">产品采集</strong>
+                    <p class="ecui-slider__item__desc">无需人工复制粘贴，各大平台热卖产品资料一键同步采集刊登，支持网址采集、易仓盒子、货源产品三种采集方式。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_03_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
                 </div>
             </div>
             <div class="ecui-slider__item__right">
-                <img src="./common/img/home/slider_01.png" alt="">
+                <img src="./common/img/home/slider_03.png" alt="">
             </div>
         </div>
     </div>
@@ -117,12 +126,22 @@
             </svg>
         </a>
     </div>
+    <div class="ecui-slider__nav">
+        <a class="ecui-slider__nav__left" href="javascript:;">
+            <i class="ecui-icon-arrow-left"></i>
+        </a>
+        <a class="ecui-slider__nav__right" href="javascript:;">
+            <i class="ecui-icon-arrow-right"></i>
+        </a>
+    </div>
 </div>
 <script>
     var slider = function () {
-        var $element = $('.ecui-slider')
-        this.$slider = $('.ecui-slider__wrapper > .ecui-slider__item', $element)
-        this.$point = $('.ecui-slider__control > .ecui-slider__control__point', $element)
+        this.$element = $('.ecui-slider')
+        this.$slider = $('.ecui-slider__wrapper > .ecui-slider__item', this.$element)
+        this.$point = $('.ecui-slider__control > .ecui-slider__control__point', this.$element)
+        this.$navLeftBtn = $('.ecui-slider__nav__left', this.$element)
+        this.$navRightBtn = $('.ecui-slider__nav__right', this.$element)
         this.sliderLength = this.$slider.length
         this.currentIndex = 0
         this.switchSpeed = 6 // 自动播放间隔(s)
@@ -146,14 +165,27 @@
                 .animate({ top: 120, opacity: 1 }, 600, 'swing')
 
             $currentSlider.find('.ecui-slider__item__right')
-                .css({ top: 200, opacity: 0 })
-                .stop(false,true)
-                .animate({ top: 140, opacity: 1 }, 800, 'swing')
+                    .css({ top: 140, opacity: 0 })
+                    .stop(false,true)
+                    .animate({ top: 120, opacity: 1 }, 800, 'swing')
+
+            switch (index) {
+                case 0:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_01_bg.png)')
+                    break
+                case 1:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_02_bg.png)')
+                    break
+                case 2:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_03_bg.png)')
+                    break
+            }
 
 
             $currentPoint.addClass('ecui-slider__progress')
                 .siblings().removeClass('ecui-slider__progress')
 
+            clearTimeout(this.timer)
             this.currentIndex = index
             this.timer = setTimeout(function() {
                 self.next()
@@ -164,14 +196,22 @@
             return this.showItem(index)
         },
         prev: function () {
-            return this.showItem(this.currentIndex - 1)
+            var index = this.currentIndex - 1 < 0 ? this.sliderLength - 1 : this.currentIndex - 1
+            return this.showItem(index)
         },
         initEvent () {
             var self = this
             this.$point.on('click', function () {
                 var showIndex = $(this).index()
-                clearTimeout(self.timer)
                 self.showItem(showIndex)
+            })
+
+            this.$navLeftBtn.on('click', function () {
+                self.prev()
+            })
+
+            this.$navRightBtn.on('click', function () {
+                self.next()
             })
         },
         init: function () {
@@ -182,8 +222,8 @@
     new slider()
 </script>
 
-    <!-- 易仓生态闭环 -->
-    <div class="ecui-home__panel ecui-bg-ecological">
+<!-- 易仓生态闭环 -->
+<div class="ecui-home__panel ecui-bg-ecological">
     <div class="ecui-container">
         <div class="ecui-home__panel__hd">
             <p class="ecui-home__panel__title">易仓生态闭环</p>
@@ -196,8 +236,8 @@
 </div>
 
 
-    <!-- 电商平台 -->
-    <div class="ecui-home__platform-area">
+<!-- 电商平台 -->
+<div class="ecui-home__platform-area">
     <div class="ecui-home__platform-area__bg">
         <img src="./common/img/home/home_platform_bg.png" alt="">
     </div>
@@ -251,28 +291,33 @@
             .siblings().removeClass('ecui-home__platform__nav__item_active')
         
         $('.ecui-home__platform__panel').html('')
-        $.each(pointList[$(this).index()] || [], function (index, item) {
-            $([
-                '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
-                    '<span class="ecui-home__platform__point__name">',
-                        item.name,
-                    '</span>',
-                    '<i class="ecui-home__platform__point__dot"></i>',
-                    '<i class="ecui-point ecui-point_1"></i>',
-                    '<i class="ecui-point ecui-point_4"></i>',
-                    '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
-                '</div>'
-            ].join(''))
-                .css({ top: item.top, left: item.left })
+        if (pointList[$(this).index()] && pointList[$(this).index()].length) {
+            $.each(pointList[$(this).index()] || [], function (index, item) {
+                $([
+                    '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
+                        '<span class="ecui-home__platform__point__name">',
+                            item.name,
+                        '</span>',
+                        '<i class="ecui-home__platform__point__dot"></i>',
+                        '<i class="ecui-point ecui-point_1"></i>',
+                        '<i class="ecui-point ecui-point_4"></i>',
+                        '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
+                    '</div>'
+                ].join(''))
+                    .css({ top: item.top, left: item.left })
+                    .appendTo($('.ecui-home__platform__panel'))
+            })
+        } else {
+            $('<span>不区分站点</span>')
+                .css({ marginTop: -112, width: '100%', fontSize: 140, fontWeight: 700, color: 'rgba(255,255,255,.15)', textAlign: 'center', position: 'absolute', top: '40%', left: '0' })
                 .appendTo($('.ecui-home__platform__panel'))
-        })
-        
+        }
     })
     .find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
 </script>
 
-    <!-- home-main -->
-    <div class="ecui-tab" id="home-main">
+<!-- home-main -->
+<div class="ecui-tab" id="main">
     <ul class="ecui-tab__nav">
         <li class="ecui-tab__nav__item ecui-tab__nav__item_active">
             <a href="javascript:;">核心功能</a>
@@ -284,59 +329,74 @@
             <a href="javascript:;">极致体验</a>
         </li>
     </ul>
-    <div class="ecui-container">
-        <!-- 核心功能 -->
-        <div class="ecui-tab__page ecui-tab__page_in">
-            <div class="ecui-home__section">
+
+    <!-- 核心功能 -->
+    <div class="ecui-tab__page ecui-tab__page_in">
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_01.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">爆款开发</strong>
                     <p class="ecui-home__section__desc">卖家选品利器，根据卖家选品条件从Amazon、Aliexpress、eBay、wish 4大主流平台爬取爆款产品和销售数据，卖家通过数据分析进行快速高效的选品</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">货源匹配</strong>
                     <p class="ecui-home__section__desc">在线找货源，铺货型卖家通过采集回来的产品图片或关键词线上寻找同款或相似产品，直接下单采购或接到订单后厂家一键代发</p>
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_02.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_03.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">产品搬家</strong>
                     <p class="ecui-home__section__desc">同一个产品快速发布到不同平台不同店铺，一键搬家同步产品资料无需多次编辑</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">一键翻译</strong>
                     <p class="ecui-home__section__desc">对接百度、谷歌翻译，产品发布到不同的站点时产品资料一键自动翻译为对应站点语种</p>
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_04.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_05.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">通用模板设置</strong>
                     <p class="ecui-home__section__desc">针对平台、站点、店铺可设置固定的政策模板、描述模板、刊登模板等，编辑生成平台草稿时自动套用关联模板，无需重复编辑实现快速刊登</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">产品自动匹配图片</strong>
                     <p class="ecui-home__section__desc">批量上传图片，设置产品图片时图片代码前缀自动匹配产品SKU ，无需单独手动设置图片；系统自动生成新的图片链接，打乱关键词防止店铺关联</p>
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_06.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_07.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">产品、类目映射</strong>
                     <p class="ecui-home__section__desc">系统分类关联平台类目，编辑产品资料时根据系统分类自动带出平台类目产品平台SKU和系统SKU自动生成映射关系，支持导出和推送到易仓ERP系统</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">定时刊登</strong>
                     <p class="ecui-home__section__desc">设置刊登日程，可根据站点时区时间设置循环刊登周期或批量刊登时间，实现产品的定时上下架</p>
@@ -344,10 +404,12 @@
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_01_08.png" alt="">
             </div>
         </div>
+    </div>
 
-        <!-- 平台特色功能 -->
-        <div class="ecui-tab__page">
-            <div class="ecui-home__section">
+    <!-- 平台特色功能 -->
+    <div class="ecui-tab__page">
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_02_01.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">eBay特色功能</strong>
@@ -362,7 +424,9 @@
                     </p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">Amazon特色功能</strong>
                     <p class="ecui-home__section__desc">
@@ -380,7 +444,9 @@
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_02_02.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_02_03.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">Wish特色功能</strong>
@@ -393,7 +459,9 @@
                     </p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">Aliexpress特色功能</strong>
                     <p class="ecui-home__section__desc">
@@ -407,7 +475,9 @@
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_02_04.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_02_05.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">Walmart特色功能</strong>
@@ -420,38 +490,48 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- 极致体验 -->
-        <div class="ecui-tab__page">
-            <div class="ecui-home__section">
+    <!-- 极致体验 -->
+    <div class="ecui-tab__page">
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_03_01.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">产品ID号码池</strong>
                     <p class="ecui-home__section__desc">批量导入UPC、EAN、ISBN到号码池，上架产品时系统自动选取</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">图片中心</strong>
                     <p class="ecui-home__section__desc">上传图片、快速搜索图片、批量修改/删除，还可以为图片添加水印</p>
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_03_02.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_03_03.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">SKU生成规则</strong>
                     <p class="ecui-home__section__desc">设置生成规则，可减少人脑记住不同平台和店铺的SKU格式，及人工输入SKU</p>
                 </div>
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">SKU关系映射</strong>
                     <p class="ecui-home__section__desc">设置生成规则，可减少人脑记住不同平台和店铺的SKU格式，及人工输入SKU</p>
                 </div>
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_03_04.png" alt="">
             </div>
-            <div class="ecui-home__section">
+        </div>
+        <div class="ecui-home__section">
+            <div class="ecui-container">
                 <img class="ecui-home__section__thumb" src="./common//img/home/home_section_03_05.png" alt="">
                 <div class="ecui-home__section__info">
                     <strong class="ecui-home__section__title">售价计算规则</strong>
@@ -460,6 +540,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -472,13 +553,15 @@
         $('.ecui-tab__page', '.ecui-tab')
             .eq(index).addClass('ecui-tab__page_in')
             .siblings().removeClass('ecui-tab__page_in')
+
+        $(window).trigger('scroll.cl.main')
     })
 
     $('.ecui-home__section').addClass('ecui-animated')
 
-    $(window).on('scroll.cl.home-main', function() {
+    $(window).on('scroll.cl.main', function() {
         var scrollTop = $(this).scrollTop()
-        $('#home-main .ecui-tab__page_in .ecui-home__section').each(function() {
+        $('#main .ecui-tab__page_in .ecui-home__section').each(function() {
             if (scrollTop > $(this).offset().top - $(window).height() + 360 / 2) {
                 $(this).addClass('ecui-animated_fadeInDown')
             }
@@ -486,8 +569,8 @@
     })
 </script>
 
-    <!-- 人工刊登 VS 易仓刊登 -->
-    <div class="ecui-container">
+<!-- 人工刊登 VS 易仓刊登 -->
+<div class="ecui-container">
     <div class="ecui-home__panel">
         <div class="ecui-home__panel__hd">
             <p class="ecui-home__panel__title">人工刊登<span>VS</span>易仓刊登</p>
@@ -592,8 +675,8 @@
     </div>
 </div>
 
-    <!-- 推广 -->
-    <div class="ecui-home__gift">
+<!-- 推广 -->
+<div class="ecui-home__gift">
     <div class="ecui-home__gift__bg">
         <video width="1960" height="240" autoplay="ture" loop muted>
             <source src="./common/video/home-gift.mp4" type="video/mp4">
@@ -618,8 +701,8 @@
     })
 </script>
 
-    <!-- 页脚 -->
-    <footer class="ecui-footer">
+<!-- 页脚 -->
+<footer class="ecui-footer">
     <div class="ecui-container">
         <div class="ecui-flex ecui-flex_align-center">
             <div class="ecui-footer__info">
@@ -686,8 +769,8 @@
     </div>
 </footer>
 
-    <!-- 返回顶部 -->
-    <div class="ecui-toolbar">
+<!-- 返回顶部 -->
+<div class="ecui-toolbar">
     <a class="ecui-toolbar__btn ecui-toolbar__btn_back-top js-back-top" href="javascript:;">
         <span class="ecui-toolbar__btn__default ecui-icon-rocket"></span>
         <span class="ecui-toolbar__btn__hover">返回顶部</span>
@@ -710,6 +793,12 @@
         setTimeout(function () {
             $self.removeClass('ecui-toolbar__btn_animation')
         }, 600)
+    })
+</script>
+
+<script>
+    $(function() {
+        $(window).trigger('scroll')
     })
 </script>
 </body>

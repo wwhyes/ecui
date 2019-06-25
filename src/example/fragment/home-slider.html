@@ -7,7 +7,7 @@
                     <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_01_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
@@ -20,35 +20,35 @@
         <div class="ecui-slider__item">
             <div class="ecui-slider__item__left">
                 <div class="ecui-slider__item__text-area">
-                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
-                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                    <strong class="ecui-slider__item__title">爆款开发引擎</strong>
+                    <p class="ecui-slider__item__desc">易仓爆款开发引擎，是一款集数据采集、货源匹配、翻译转换、快速刊登于一体的爆款开发软件，专门为跨境电商卖家高效完成销售渠道铺货而精心打造，能高效发现蓝海产品、快速打造爆款、迅速铺货新平台。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_02_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
                 </div>
             </div>
             <div class="ecui-slider__item__right">
-                <img src="./common/img/home/slider_01.png" alt="">
+                <img src="./common/img/home/slider_02.png" alt="">
             </div>
         </div>
         <div class="ecui-slider__item">
             <div class="ecui-slider__item__left">
                 <div class="ecui-slider__item__text-area">
-                    <strong class="ecui-slider__item__title">刊登Listing，第三方刊登工具</strong>
-                    <p class="ecui-slider__item__desc">打通易仓ERP，真正解决一套产品资料，快速高效刊登到eBay、Wish、速卖通和亚马逊等平台。跨平台一站式管理本地产品，自动同步各平台在线产品信息，实时编辑同步在线产品，更有产品定时刊登,平台和本地产品SKU自动匹配等功能，满足卖家多样化管理产品需求。</p>
+                    <strong class="ecui-slider__item__title">产品采集</strong>
+                    <p class="ecui-slider__item__desc">无需人工复制粘贴，各大平台热卖产品资料一键同步采集刊登，支持网址采集、易仓盒子、货源产品三种采集方式。</p>
                 </div>
                 <div class="ecui-slider__item__image-area">
-                    <img src="./common/img/home/platform_list.png" alt="">
+                    <img src="./common/img/home/slider_03_platform.png" alt="">
                 </div>
                 <div class="ecui-slider__item__btn-area">
                     <a class="ecui-slider__item__btn" href="javascript:;">免费体验</a>
                 </div>
             </div>
             <div class="ecui-slider__item__right">
-                <img src="./common/img/home/slider_01.png" alt="">
+                <img src="./common/img/home/slider_03.png" alt="">
             </div>
         </div>
     </div>
@@ -72,12 +72,22 @@
             </svg>
         </a>
     </div>
+    <div class="ecui-slider__nav">
+        <a class="ecui-slider__nav__left" href="javascript:;">
+            <i class="ecui-icon-arrow-left"></i>
+        </a>
+        <a class="ecui-slider__nav__right" href="javascript:;">
+            <i class="ecui-icon-arrow-right"></i>
+        </a>
+    </div>
 </div>
 <script>
     var slider = function () {
-        var $element = $('.ecui-slider')
-        this.$slider = $('.ecui-slider__wrapper > .ecui-slider__item', $element)
-        this.$point = $('.ecui-slider__control > .ecui-slider__control__point', $element)
+        this.$element = $('.ecui-slider')
+        this.$slider = $('.ecui-slider__wrapper > .ecui-slider__item', this.$element)
+        this.$point = $('.ecui-slider__control > .ecui-slider__control__point', this.$element)
+        this.$navLeftBtn = $('.ecui-slider__nav__left', this.$element)
+        this.$navRightBtn = $('.ecui-slider__nav__right', this.$element)
         this.sliderLength = this.$slider.length
         this.currentIndex = 0
         this.switchSpeed = 6 // 自动播放间隔(s)
@@ -101,14 +111,27 @@
                 .animate({ top: 120, opacity: 1 }, 600, 'swing')
 
             $currentSlider.find('.ecui-slider__item__right')
-                .css({ top: 200, opacity: 0 })
-                .stop(false,true)
-                .animate({ top: 140, opacity: 1 }, 800, 'swing')
+                    .css({ top: 140, opacity: 0 })
+                    .stop(false,true)
+                    .animate({ top: 120, opacity: 1 }, 800, 'swing')
+
+            switch (index) {
+                case 0:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_01_bg.png)')
+                    break
+                case 1:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_02_bg.png)')
+                    break
+                case 2:
+                    this.$element.css('background-image', 'url(./common/img/home/slider_03_bg.png)')
+                    break
+            }
 
 
             $currentPoint.addClass('ecui-slider__progress')
                 .siblings().removeClass('ecui-slider__progress')
 
+            clearTimeout(this.timer)
             this.currentIndex = index
             this.timer = setTimeout(function() {
                 self.next()
@@ -119,14 +142,22 @@
             return this.showItem(index)
         },
         prev: function () {
-            return this.showItem(this.currentIndex - 1)
+            var index = this.currentIndex - 1 < 0 ? this.sliderLength - 1 : this.currentIndex - 1
+            return this.showItem(index)
         },
         initEvent () {
             var self = this
             this.$point.on('click', function () {
                 var showIndex = $(this).index()
-                clearTimeout(self.timer)
                 self.showItem(showIndex)
+            })
+
+            this.$navLeftBtn.on('click', function () {
+                self.prev()
+            })
+
+            this.$navRightBtn.on('click', function () {
+                self.next()
             })
         },
         init: function () {

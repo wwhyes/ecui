@@ -52,22 +52,27 @@
             .siblings().removeClass('ecui-home__platform__nav__item_active')
         
         $('.ecui-home__platform__panel').html('')
-        $.each(pointList[$(this).index()] || [], function (index, item) {
-            $([
-                '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
-                    '<span class="ecui-home__platform__point__name">',
-                        item.name,
-                    '</span>',
-                    '<i class="ecui-home__platform__point__dot"></i>',
-                    '<i class="ecui-point ecui-point_1"></i>',
-                    '<i class="ecui-point ecui-point_4"></i>',
-                    '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
-                '</div>'
-            ].join(''))
-                .css({ top: item.top, left: item.left })
+        if (pointList[$(this).index()] && pointList[$(this).index()].length) {
+            $.each(pointList[$(this).index()] || [], function (index, item) {
+                $([
+                    '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
+                        '<span class="ecui-home__platform__point__name">',
+                            item.name,
+                        '</span>',
+                        '<i class="ecui-home__platform__point__dot"></i>',
+                        '<i class="ecui-point ecui-point_1"></i>',
+                        '<i class="ecui-point ecui-point_4"></i>',
+                        '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
+                    '</div>'
+                ].join(''))
+                    .css({ top: item.top, left: item.left })
+                    .appendTo($('.ecui-home__platform__panel'))
+            })
+        } else {
+            $('<span>不区分站点</span>')
+                .css({ marginTop: -112, width: '100%', fontSize: 140, fontWeight: 700, color: 'rgba(255,255,255,.15)', textAlign: 'center', position: 'absolute', top: '40%', left: '0' })
                 .appendTo($('.ecui-home__platform__panel'))
-        })
-        
+        }
     })
     .find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
 </script>

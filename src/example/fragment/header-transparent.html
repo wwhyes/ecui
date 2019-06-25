@@ -7,12 +7,12 @@
             </div>
             <div class="ecui-titlebar__nav">
                 <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="index.html">首页</a>
-                <div class="ecui-titlebar__nav__item">产品功能</div>
+                <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
                 <a class="ecui-titlebar__nav__item" href="价格.html">价格</a>
                 <div class="ecui-titlebar__nav__item">帮助中心</div>
             </div>
             <div class="ecui-titlebar__other">
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登陆</a>
+                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
                 <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
             </div>
         </div>
@@ -22,10 +22,19 @@
 <script>
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop()
+        var mainScrollTop = $('#main').offset().top
         if (scrollTop === 0) {
             $('.ecui-header_fix').removeAttr('style')
         } else {
             $('.ecui-header_fix').css('background', '#242a37')
+        }
+
+        if (scrollTop >= mainScrollTop - 75) {
+            $('.ecui-titlebar__nav__item').eq(1).addClass('ecui-titlebar__nav__item_active')
+                .siblings().removeClass('ecui-titlebar__nav__item_active')
+        } else {
+            $('.ecui-titlebar__nav__item').eq(0).addClass('ecui-titlebar__nav__item_active')
+                .siblings().removeClass('ecui-titlebar__nav__item_active')
         }
     })
 </script>

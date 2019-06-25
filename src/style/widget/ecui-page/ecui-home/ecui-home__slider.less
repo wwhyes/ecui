@@ -1,6 +1,8 @@
 .ecui-slider {
     position: relative;
-    background: #252936 url(../example/common/img/home/home_slider_bg.png) no-repeat center 0px;
+    background-color: #252936;
+    background-repeat: no-repeat;
+    background-position: center 0px;
 }
 
 .ecui-slider__wrapper {
@@ -112,5 +114,31 @@
     }
     to {
         stroke-dashoffset: 6px;
+    }
+}
+
+.ecui-slider__nav {
+    font-size: 50px;
+    line-height: 1;
+}
+.ecui-slider__nav__left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.ecui-slider__nav__right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.ecui-slider__nav__left,
+.ecui-slider__nav__right {
+    margin-top: -25px;
+    color: rgba(255, 255, 255, 0.33);
+
+    &:hover {
+        color: #fff;
     }
 }

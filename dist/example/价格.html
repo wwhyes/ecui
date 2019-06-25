@@ -9,8 +9,8 @@
     <script src="./common/js/jquery.min.js"></script>
 </head>
 <body>
-    <!-- 页头 -->
-    <header class="ecui-header ecui-header_fix">
+<!-- 页头 -->
+<header class="ecui-header ecui-header_fix">
     <div class="ecui-container">
         <div class="ecui-titlebar ecui-titlebar_default">
             <div class="ecui-titlebar__hd">
@@ -19,12 +19,12 @@
             </div>
             <div class="ecui-titlebar__nav">
                 <a class="ecui-titlebar__nav__item" href="index.html">首页</a>
-                <div class="ecui-titlebar__nav__item">产品功能</div>
+                <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
                 <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="javascript:;">价格</a>
                 <div class="ecui-titlebar__nav__item">帮助中心</div>
             </div>
             <div class="ecui-titlebar__other">
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登陆</a>
+                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
                 <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
             </div>
         </div>
@@ -32,8 +32,8 @@
 </header>
 <div style="height: 75px;"></div>
 
-    <!-- banner -->
-    <div class="ecui-home__banner">
+<!-- banner -->
+<div class="ecui-home__banner">
     <div class="ecui-home__banner__bg">
         <img src="./common/img/home/home_banner.png" alt="">
     </div>
@@ -48,8 +48,8 @@
     </div>
 </div>
 
-    <!-- price-main -->
-    <div class="ecui-tab">
+<!-- price-main -->
+<div class="ecui-tab" id="main">
     <ul class="ecui-tab__nav">
         <li class="ecui-tab__nav__item ecui-tab__nav__item_active">
             <a href="javascript:;">刊登套餐服务</a>
@@ -557,8 +557,8 @@
     })
 </script>
 
-    <!-- 功能清单 -->
-    <div class="ecui-container">
+<!-- 功能清单 -->
+<div class="ecui-container">
     <div class="ecui-home__panel">
         <div class="ecui-home__panel__hd">
             <p class="ecui-home__panel__title">功能清单</p>
@@ -627,7 +627,9 @@
                 <!-- 平台 -->
                 <tbody>
                     <tr>
-                        <td align="center" rowspan="33">平<br>台</td>
+                        <td align="center" rowspan="33">
+                            <h3>平<br>台</h3>
+                        </td>
                         <td class="ecui-bg-active" align="center" rowspan="6">
                             <img src="./common/img/home/platform_ebay.png" alt="ebay">
                         </td>
@@ -796,7 +798,9 @@
                 <!-- 其他 -->
                 <tbody>
                     <tr>
-                        <td align="center" rowspan="6">其<br>他</td>
+                        <td align="center" rowspan="6">
+                            <h3>其<br>他</h3>
+                        </td>
                         <td class="ecui-bg-active" align="center" rowspan="2">图片库</td>
                         <td class="ecui-bg-active" align="center">图片分类</td>
                         <td class="ecui-bg-active">维护图片分类</td>
@@ -828,33 +832,36 @@
     </div>
 </div>
 
-    <!-- 常见问题 -->
-    <div class="ecui-container">
+<!-- 常见问题 -->
+<div class="ecui-bg-wave">
+    <img class="ecui-bg-wave__top" src="./common/img/home/home_panel_wave.png" alt="">
     <div class="ecui-home__panel">
         <div class="ecui-home__panel__hd">
             <p class="ecui-home__panel__title">常见问题</p>
         </div>
-        <div class="ecui-home__panel__bd">
-            <div class="ecui-home__question ecui-float-left">
-                <p class="ecui-home__question__title">Q：试用期是否需要额外付费？</p>
-                <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
-                <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
-                <p class="ecui-home__question__title">Q：试用到期会如何？</p>
-                <p class="ecui-home__question__answer">14天试用到期后，数据都将安全保留，充值付费后可以继续使用。</p>
-            </div>
-            <div class="ecui-home__question ecui-float-right">
-                <p class="ecui-home__question__title">Q：图片空间的图片存储在哪？</p>
-                <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
-                <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
-                <p class="ecui-home__question__title">Q：购买爆款开发引擎套餐有什么优惠？</p>
-                <p class="ecui-home__question__answer">按年支付较按月支付可省￥6001，开通全版本更划算。</p>
+        <div class="ecui-container">
+            <div class="ecui-home__panel__bd">
+                <div class="ecui-home__question ecui-float-left">
+                    <p class="ecui-home__question__title">Q：试用期是否需要额外付费？</p>
+                    <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
+                    <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
+                    <p class="ecui-home__question__title">Q：试用到期会如何？</p>
+                    <p class="ecui-home__question__answer">14天试用到期后，数据都将安全保留，充值付费后可以继续使用。</p>
+                </div>
+                <div class="ecui-home__question ecui-float-right">
+                    <p class="ecui-home__question__title">Q：图片空间的图片存储在哪？</p>
+                    <p class="ecui-home__question__answer">试用期无需额外付费，刊登Listing所有功能均有14天免费试用，爆款</p>
+                    <p class="ecui-home__question__answer">开发引擎试用期仅限采集10个产。</p>
+                    <p class="ecui-home__question__title">Q：购买爆款开发引擎套餐有什么优惠？</p>
+                    <p class="ecui-home__question__answer">按年支付较按月支付可省￥6001，开通全版本更划算。</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-    <!-- 推广 -->
-    <div class="ecui-home__gift">
+<!-- 推广 -->
+<div class="ecui-home__gift">
     <div class="ecui-home__gift__bg">
         <video width="1960" height="240" autoplay="ture" loop muted>
             <source src="./common/video/home-gift.mp4" type="video/mp4">
@@ -879,8 +886,8 @@
     })
 </script>
 
-    <!-- 页脚 -->
-    <footer class="ecui-footer">
+<!-- 页脚 -->
+<footer class="ecui-footer">
     <div class="ecui-container">
         <div class="ecui-flex ecui-flex_align-center">
             <div class="ecui-footer__info">
@@ -947,8 +954,8 @@
     </div>
 </footer>
 
-    <!-- 返回顶部 -->
-    <div class="ecui-toolbar">
+<!-- 返回顶部 -->
+<div class="ecui-toolbar">
     <a class="ecui-toolbar__btn ecui-toolbar__btn_back-top js-back-top" href="javascript:;">
         <span class="ecui-toolbar__btn__default ecui-icon-rocket"></span>
         <span class="ecui-toolbar__btn__hover">返回顶部</span>
