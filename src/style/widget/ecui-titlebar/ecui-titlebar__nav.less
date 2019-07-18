@@ -8,8 +8,9 @@
     margin: 0 25px;
     padding: 4px 8px;
     display: inline-block;
-    color: inherit;
     border-bottom: 3px solid transparent;
+    color: inherit;
+    text-align: center;
     cursor: default;
 
     a& {
@@ -20,4 +21,18 @@
 .ecui-titlebar__nav__item:hover,
 .ecui-titlebar__nav__item_active {
     border-bottom-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .ecui-titlebar__nav__item {
+        margin: 0;
+        padding: 0 20px;
+        flex: 1;
+        border: 0;
+        line-height: 50px;
+    }
+    .ecui-titlebar__nav__item:hover,
+    .ecui-titlebar__nav__item_active {
+        background-color: #243c5a;
+    }
 }

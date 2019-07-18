@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>刊登系统（EC Listing）</title>
     <link rel="icon" href="./favicon.ico">
@@ -15,23 +15,35 @@
     <div class="ecui-container">
         <div class="ecui-titlebar ecui-titlebar_default">
             <div class="ecui-titlebar__hd">
-                <img src="./common/img/header/logo.png" alt="">
+                <img class="ecui-titlebar__logo" src="./common/img/header/logo.png" alt="">
                 <div class="ecui-titlebar__title">刊登系统（EC Listing）</div>
             </div>
-            <div class="ecui-titlebar__nav">
-                <a class="ecui-titlebar__nav__item" href="index.html">首页</a>
-                <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
-                <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="javascript:;">价格</a>
-                <div class="ecui-titlebar__nav__item">帮助中心</div>
+            <div class="ecui-titlebar__bd">
+                <div class="ecui-titlebar__nav">
+                    <a class="ecui-titlebar__nav__item" href="index.html">首页</a>
+                    <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
+                    <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="javascript:;">价格</a>
+                    <div class="ecui-titlebar__nav__item">帮助中心</div>
+                </div>
+                <div class="ecui-titlebar__other">
+                    <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
+                    <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
+                </div>
             </div>
-            <div class="ecui-titlebar__other">
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
+            <div class="ecui-titlebar__menu">
+                <i class="ecui-icon ecui-icon-menu"></i>
             </div>
         </div>
     </div>
 </header>
 <div style="height: 75px;"></div>
+
+<script>
+    $('.ecui-header').on('click', '.ecui-titlebar__menu', function () {
+        $('.ecui-titlebar__bd').toggle()
+    })
+</script>
+
 
 <!-- banner -->
 <div class="ecui-home__banner">
@@ -48,6 +60,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- price-main -->
 <div class="ecui-tab" id="main">
@@ -558,6 +571,7 @@
     })
 </script>
 
+
 <!-- 功能清单 -->
 <div class="ecui-container">
     <div class="ecui-home__panel">
@@ -833,6 +847,7 @@
     </div>
 </div>
 
+
 <!-- 常见问题 -->
 <div class="ecui-bg-wave">
     <img class="ecui-bg-wave__top" src="./common/img/home/home_panel_wave.png" alt="">
@@ -861,6 +876,7 @@
     </div>
 </div>
 
+
 <!-- 推广 -->
 <div class="ecui-home__gift">
     <div class="ecui-home__gift__bg">
@@ -869,9 +885,10 @@
         </video>
     </div>
     <div class="ecui-home__gift__bd">
-        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">50,520</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">120,522,321</span>在线Listing</p>
+        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">10万+</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">8000万+</span>在线Listing</p>
         <p class="ecui-home__gift__desc">只需注册易仓刊登Listing账户，卖家即可在线管理eBay，Amazon，Wish，Aliexpress等平台商品 - 易仓刊登真正实现一套产品资料快速高效刊登至各大主流平台</p>
-        <a class="ecui-home__gift__btn" href="javascript:;">立即开始14天免费体验</a>
+
+        <a class="ecui-home__gift__btn" href="javascript:;">立即免费体验</a>
     </div>
 </div>
 
@@ -884,8 +901,15 @@
             $(window).off('scroll.cl.ecui-home__gift')
             $('.ecui-home__gift__numb').leoTextAnimate({delay: 200, autorun: true, fixed: [',',':','.'], start: '0'});
         }
+    }).on('resize', function() {
+        if ($(window).width() > 640) {
+            $('.ecui-home__gift__desc').show()
+        } else {
+            $('.ecui-home__gift__desc').hide()
+        }
     })
 </script>
+
 
 <!-- 页脚 -->
 <footer class="ecui-footer">
@@ -981,5 +1005,6 @@
         }, 600)
     })
 </script>
+
 </body>
 </html>

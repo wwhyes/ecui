@@ -1,12 +1,12 @@
 .ecui-titlebar {
     display: flex;
     font-size: 16px;
+}
 
-    img {
-        display: inline-block;
-        height: 37px;
-        vertical-align: middle;
-    }
+.ecui-titlebar__logo {
+    display: inline-block;
+    height: 37px;
+    vertical-align: middle;
 }
 
 .ecui-titlebar__title {
@@ -17,8 +17,47 @@
     vertical-align: middle;
 }
 
+.ecui-titlebar__bd {
+    display: flex;
+    flex: 1;
+}
+
 .ecui-titlebar__other {
     display: inline-block;
+}
+
+.ecui-titlebar__menu {
+    display: none;
+    font-size: 16px;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    .ecui-titlebar {
+        font-size: 12px;
+        align-items: center;
+    }
+    .ecui-titlebar__hd {
+        flex: 1;
+    }
+    .ecui-titlebar__logo {
+        height: 26px;
+    }
+    .ecui-titlebar__bd {
+        display: none;
+        width: 100%;
+        background-color: #242a37;
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .ecui-titlebar__other {
+        display: none;
+    }
+    .ecui-titlebar__menu {
+        display: inline-block;
+    }
 }
 
 @import "./ecui-titlebar__nav.less";

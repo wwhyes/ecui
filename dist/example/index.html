@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>刊登系统（EC Listing）</title>
     <link rel="icon" href="./favicon.ico">
@@ -11,22 +11,27 @@
 </head>
 <body ontouchstart>
 <!-- 页头 -->
-<header class="ecui-header ecui-header_transparent ecui-header_fix">
+<header class="ecui-header ecui-header_transparent ecui-header_fix" style="background-color: #242a37;">
     <div class="ecui-container">
         <div class="ecui-titlebar">
             <div class="ecui-titlebar__hd">
-                <img src="./common/img/header/logo_transparent.png" alt="">
+                <img class="ecui-titlebar__logo" src="./common/img/header/logo_transparent.png" alt="">
                 <div class="ecui-titlebar__title">刊登系统（EC Listing）</div>
             </div>
-            <div class="ecui-titlebar__nav">
-                <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="index.html">首页</a>
-                <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
-                <a class="ecui-titlebar__nav__item" href="价格.html">价格</a>
-                <div class="ecui-titlebar__nav__item">帮助中心</div>
+            <div class="ecui-titlebar__bd">
+                <div class="ecui-titlebar__nav">
+                    <a class="ecui-titlebar__nav__item ecui-titlebar__nav__item_active" href="index.html">首页</a>
+                    <a class="ecui-titlebar__nav__item" href="index.html#main">产品功能</a>
+                    <a class="ecui-titlebar__nav__item" href="价格.html">价格</a>
+                    <div class="ecui-titlebar__nav__item">帮助中心</div>
+                </div>
+                <div class="ecui-titlebar__other">
+                    <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
+                    <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
+                </div>
             </div>
-            <div class="ecui-titlebar__other">
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_link" href="javascript:;">登录</a>
-                <a class="ecui-titlebar__btn ecui-titlebar__btn_primary" href="javascript:;">免费试用</a>
+            <div class="ecui-titlebar__menu">
+                <i class="ecui-icon ecui-icon-menu"></i>
             </div>
         </div>
     </div>
@@ -36,7 +41,7 @@
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop()
         var mainScrollTop = $('#main').offset().top
-        if (scrollTop === 0) {
+        if (scrollTop === 0 && $(window).width() > 640) {
             $('.ecui-header_fix').removeAttr('style')
         } else {
             $('.ecui-header_fix').css('background', '#242a37')
@@ -50,7 +55,12 @@
                 .siblings().removeClass('ecui-titlebar__nav__item_active')
         }
     })
+
+    $('.ecui-header').on('click', '.ecui-titlebar__menu', function () {
+        $('.ecui-titlebar__bd').toggle()
+    })
 </script>
+
 
 <!-- 轮播图 -->
 <div class="ecui-slider">
@@ -223,21 +233,23 @@
     new slider()
 </script>
 
+
 <!-- 易仓生态闭环 -->
-<div class="ecui-home__panel ecui-bg-ecological">
+<div class="ecui-home__panel ecui-bg-ecological" id="ecological">
     <div class="ecui-container">
         <div class="ecui-home__panel__hd">
             <p class="ecui-home__panel__title">易仓生态闭环</p>
             <p class="ecui-home__panel__desc">十大主流平台，各渠道产品资料共享，多角色工作协同开展</p>
         </div>
         <div class="ecui-home__panel__bd">
-            <img src="./common/img/home/home_ecological.png" alt="">
+            <img src="./common/img/home/home_ecological_mini.png" style="width:100%;">
         </div>
     </div>
 </div>
 
 
 <!-- 电商平台 -->
+
 <div class="ecui-home__platform-area">
     <div class="ecui-home__platform-area__bg">
         <img src="./common/img/home/home_platform_bg.png" alt="">
@@ -246,11 +258,16 @@
         <p class="ecui-home__platform-area__title">支持<span class="ecui-home__platform-area__numb">10+</span>平台，主流站点刊登</p>
     </div>
     <div class="ecui-home__platform-area__bd">
-        <div class="ecui-platform">
+        <div class="ecui-home__platform">
             <div class="ecui-home__platform__panel">
                 <!-- point list -->
+                <img src="./common/img/home/home_platform_map.png" alt="">
+                <span class="ecui-home__platform__title">不区分站点</span>
             </div>
             <div class="ecui-home__platform__nav">
+                <a class="ecui-home__platform__nav__prev">
+                    <i class="ecui-icon-arrow-left"></i>
+                </a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_01" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_02" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_03" href="javascript:;"></a>
@@ -261,6 +278,9 @@
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_08" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_09" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_10" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__next">
+                    <i class="ecui-icon-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -270,68 +290,72 @@
 <script>
     var pointList = [
         [
-            { name: '加拿大', top: 52, left: 176 },
-            { name: '美国', top: 117, left:226 },
-            { name: '爱尔兰', top: 45, left: 450 },
-            { name: '英国', top: 56, left: 465 },
-            { name: '西班牙', top: 87, left: 479 },
-            { name: '比利时', top: 58, left: 496 },
-            { name: '意大利', top: 100, left: 523 },
-            { name: '法国', top: 76, left: 528 },
-            { name: '荷兰', top: 47, left: 536 },
-            { name: '德国', top: 65, left: 550 },
-            { name: '波兰', top: 56, left: 550 },
-            { name: '印度', top: 175, left: 706 },
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '香港', top: 172, left: 815 },
-            { name: '菲律宾', top: 254, left: 893 },
-            { name: '澳大利亚', top: 363, left: 923 },
+            { name: '加拿大', top: 102, left: 226 },
+            { name: '美国', top: 167, left: 276 },
+            { name: '爱尔兰', top: 95, left: 500 },
+            { name: '英国', top: 106, left: 515 },
+            { name: '西班牙', top: 137, left: 529 },
+            { name: '比利时', top: 108, left: 546 },
+            { name: '意大利', top: 150, left: 573 },
+            { name: '法国', top: 126, left: 578 },
+            { name: '荷兰', top: 97, left: 586 },
+            { name: '德国', top: 115, left: 600 },
+            { name: '波兰', top: 106, left: 600 },
+            { name: '印度', top: 225, left: 756 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '香港', top: 222, left: 865 },
+            { name: '菲律宾', top: 304, left: 933 },
+            { name: '澳大利亚', top: 413, left: 973 },
         ],
         [
-            { name: '加拿大', top: 52, left: 176 },
-            { name: '美国', top: 117, left:226 },
-            { name: '英国', top: 56, left: 465 },
-            { name: '西班牙', top: 87, left: 479 },
-            { name: '意大利', top: 100, left: 523 },
-            { name: '法国', top: 76, left: 528 },
-            { name: '德国', top: 65, left: 550 },
-            { name: '日本', top: 112, left: 905 },
-            { name: '澳大利亚', top: 363, left: 923 },
-        ],
-        [ ],
-        [ ],
-        [
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '泰国', top: 178, left: 779 },
-            { name: '越南', top: 197, left: 807 },
-            { name: '印尼', top: 257, left: 830 },
-            { name: '菲律宾', top: 254, left: 893 },
-        ],
-        [
-            { name: '泰国', top: 178, left: 779 },
-            { name: '越南', top: 197, left: 807 },
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '印尼', top: 257, left: 830 },
-            { name: '菲律宾', top: 254, left: 893 },
-            { name: '台湾', top: 157, left: 842 },
+            { name: '加拿大', top: 102, left: 226 },
+            { name: '美国', top: 167, left: 276 },
+            { name: '英国', top: 106, left: 515 },
+            { name: '西班牙', top: 137, left: 529 },
+            { name: '意大利', top: 150, left: 573 },
+            { name: '法国', top: 126, left: 578 },
+            { name: '德国', top: 115, left: 600 },
+            { name: '日本', top: 162, left: 955 },
+            { name: '澳大利亚', top: 413, left: 973 },
         ],
         [ ],
+        [ ],
         [
-            { name: '美国', top: 117, left:226 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '泰国', top: 228, left: 829 },
+            { name: '越南', top: 247, left: 857 },
+            { name: '印尼', top: 307, left: 880 },
+            { name: '菲律宾', top: 304, left: 943 },
+        ],
+        [
+            { name: '泰国', top: 228, left: 829 },
+            { name: '越南', top: 247, left: 857 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '印尼', top: 307, left: 880 },
+            { name: '菲律宾', top: 304, left: 943 },
+            { name: '台湾', top: 207, left: 892 },
+        ],
+        [ ],
+        [
+            { name: '美国', top: 167, left:276 },
         ]
     ]
-    $('.ecui-home__platform-area').on('click', '.ecui-home__platform__nav__item', function () {
-        $(this).addClass('ecui-home__platform__nav__item_active')
-            .siblings().removeClass('ecui-home__platform__nav__item_active')
-        
-        $('.ecui-home__platform__panel').html('')
-        if (pointList[$(this).index()] && pointList[$(this).index()].length) {
-            $.each(pointList[$(this).index()] || [], function (index, item) {
+    var pointPage = 0
+    var pointIndex = 0
+    function initPoint() {
+        var current = pointList[pointIndex]
+
+        $('.ecui-home__platform__panel').html('<img src="./common/img/home/home_platform_map.png" alt="">')
+        if (current && current.length) {
+            var scale = $('.ecui-home__platform__panel').width() / 1100
+            $.each(current || [], function (index, item) {
+                var top = item.top * scale - 50
+                var left = item.left * scale - 50
                 $([
-                    '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
+                    '<div class="ecui-home__platform__point">',
                         '<span class="ecui-home__platform__point__name">',
                             item.name,
                         '</span>',
@@ -341,17 +365,49 @@
                         '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
                     '</div>'
                 ].join(''))
-                    .css({ top: item.top, left: item.left })
+                    .css({ top: top, left: left })
                     .appendTo($('.ecui-home__platform__panel'))
             })
         } else {
-            $('<span>不区分站点</span>')
-                .css({ marginTop: -112, width: '100%', fontSize: 140, fontWeight: 700, color: 'rgba(255,255,255,.15)', textAlign: 'center', position: 'absolute', top: '40%', left: '0' })
+            $('<span class="ecui-home__platform__title">不区分站点</span>')
                 .appendTo($('.ecui-home__platform__panel'))
         }
+    }
+    function initPointPage() {
+        var index = pointPage * 4
+        $('.ecui-home__platform__nav__item').hide()
+        $('.ecui-home__platform__nav__item').eq(index + 0).show()
+        $('.ecui-home__platform__nav__item').eq(index + 1).show()
+        $('.ecui-home__platform__nav__item').eq(index + 2).show()
+        $('.ecui-home__platform__nav__item').eq(index + 3).show()
+    }
+    $('.ecui-home__platform-area').on('click', '.ecui-home__platform__nav__item', function () {
+        pointIndex = $(this).index()
+        $(this).addClass('ecui-home__platform__nav__item_active')
+            .siblings().removeClass('ecui-home__platform__nav__item_active')
+            initPoint()
+    }).on('click', '.ecui-home__platform__nav__prev', function () {
+        pointPage = pointPage - 1 >= 0 ? pointPage - 1 : 0
+        initPointPage()
+    }).on('click', '.ecui-home__platform__nav__next', function () {
+        pointPage = pointPage + 1 <= 2 ? pointPage + 1 : 2
+        initPointPage()
     })
-    .find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
+
+    // init event
+    $('.ecui-home__platform-area').find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
+
+    $(window).resize(function () {
+        initPoint()
+
+        if ($(window).width() > 640) {
+            $('.ecui-home__platform__nav__item').show()
+        } else {
+            initPointPage()
+        }
+    })
 </script>
+
 
 <!-- home-main -->
 <div class="ecui-tab" id="main">
@@ -606,6 +662,7 @@
     })
 </script>
 
+
 <!-- 人工刊登 VS 易仓刊登 -->
 <div class="ecui-container">
     <div class="ecui-home__panel">
@@ -712,6 +769,7 @@
     </div>
 </div>
 
+
 <!-- 推广 -->
 <div class="ecui-home__gift">
     <div class="ecui-home__gift__bg">
@@ -720,9 +778,10 @@
         </video>
     </div>
     <div class="ecui-home__gift__bd">
-        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">50,520</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">120,522,321</span>在线Listing</p>
+        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">10万+</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">8000万+</span>在线Listing</p>
         <p class="ecui-home__gift__desc">只需注册易仓刊登Listing账户，卖家即可在线管理eBay，Amazon，Wish，Aliexpress等平台商品 - 易仓刊登真正实现一套产品资料快速高效刊登至各大主流平台</p>
-        <a class="ecui-home__gift__btn" href="javascript:;">立即开始14天免费体验</a>
+
+        <a class="ecui-home__gift__btn" href="javascript:;">立即免费体验</a>
     </div>
 </div>
 
@@ -735,8 +794,15 @@
             $(window).off('scroll.cl.ecui-home__gift')
             $('.ecui-home__gift__numb').leoTextAnimate({delay: 200, autorun: true, fixed: [',',':','.'], start: '0'});
         }
+    }).on('resize', function() {
+        if ($(window).width() > 640) {
+            $('.ecui-home__gift__desc').show()
+        } else {
+            $('.ecui-home__gift__desc').hide()
+        }
     })
 </script>
+
 
 <!-- 页脚 -->
 <footer class="ecui-footer">
@@ -833,9 +899,11 @@
     })
 </script>
 
+
 <script>
     $(function() {
         $(window).trigger('scroll')
+        $(window).trigger('resize')
     })
 </script>
 </body>

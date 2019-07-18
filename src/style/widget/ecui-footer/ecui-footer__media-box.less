@@ -12,10 +12,12 @@
     margin-right: 15px;
     display: inline-block;
     width: 37px;
+    min-width: 37px;
 }
 
 .ecui-footer__media-box__bd {
     flex: 1;
+    overflow: hidden;
 }
 
 .ecui-footer__media-box__thumb {
@@ -30,4 +32,15 @@
 
 .ecui-footer__media-box__desc {
     color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    .ecui-footer__media-box {
+        float: none!important;
+        font-size: 12px;
+        width: 49%;
+    }
 }

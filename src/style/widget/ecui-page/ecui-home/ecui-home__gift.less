@@ -1,4 +1,6 @@
 .ecui-home__gift {
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     min-width: 1200px;
     height: 240px;
@@ -56,4 +58,23 @@
     color: #fff;
     text-align: center;
     line-height: 46px;
+}
+
+@media (max-width: 640px) {
+    .ecui-home__gift {
+        min-width: auto;
+    }
+
+    .ecui-home__gift__bd {
+        padding: 0 30px;
+    }
+
+    .ecui-home__gift__title {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .ecui-home__gift__numb {
+        font-size: 24px;
+    }
 }

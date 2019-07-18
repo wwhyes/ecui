@@ -1,0 +1,33 @@
+.ecui-home__platform {
+    margin-left: 45px;
+    margin-right: 45px;
+    position: relative;
+}
+
+.ecui-home__platform__title {
+    font-size: 140px;
+    font-weight: 700;
+    color: rgba(255,255,255,.15);
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+    .ecui-home__platform {
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+    }
+
+    .ecui-home__platform__title {
+        font-size: 40px;
+    }
+}
+
+@import "./ecui-home__platform__panel.less";
+@import "./ecui-home__platform__point.less";
+@import "./ecui-home__platform__nav.less";

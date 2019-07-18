@@ -1,31 +1,38 @@
 .ecui-home__platform__nav {
-    display: inline-block;
     padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     white-space: nowrap;
     overflow: hidden;
 }
 
+.ecui-home__platform__nav__prev,
+.ecui-home__platform__nav__next {
+    display: none;
+    font-size: 13px;
+}
+
 .ecui-home__platform__nav__item {
-    float: left;
     margin: 0 5px;
     width: 100px;
     height: 40px;
     background-color: #fff;
     background-image: url(../example/common/img/home/home_platform_logo.png);
     background-repeat: no-repeat;
-    background-position-y: -16px;
+    background-position-y: 15%;
     position: relative;
     transition: all .5s;
 
     &:hover,
     &_active {
-        background-position-y: -83px;
+        background-position-y: 78%;
         background-color: #00A4FF;
     }
 
     &_active::before {
         content: " ";
-        margin-top: -12px;
+        margin-top: -11px;
         margin-left: -4px;
         border-width: 6px 4px;
         border-style: solid;
@@ -37,13 +44,25 @@
     }
 }
 
-.ecui-home__platform__nav__item_01 {background-position-x: 5px;}
-.ecui-home__platform__nav__item_02 {background-position-x: -120px;}
-.ecui-home__platform__nav__item_03 {background-position-x: -235px;}
-.ecui-home__platform__nav__item_04 {background-position-x: -356px;}
-.ecui-home__platform__nav__item_05 {background-position-x: -478px;}
-.ecui-home__platform__nav__item_06 {background-position-x: -598px;}
-.ecui-home__platform__nav__item_07 {background-position-x: -715px;}
-.ecui-home__platform__nav__item_08 {background-position-x: -835px;}
-.ecui-home__platform__nav__item_09 {background-position-x: -956px;}
-.ecui-home__platform__nav__item_10 {background-position-x: -1078px;}
+.ecui-home__platform__nav__item_01 {background-position-x: -0.4%;}
+.ecui-home__platform__nav__item_02 {background-position-x: 11%;}
+.ecui-home__platform__nav__item_03 {background-position-x: 21.8%;}
+.ecui-home__platform__nav__item_04 {background-position-x: 32.7%;}
+.ecui-home__platform__nav__item_05 {background-position-x: 43.8%;}
+.ecui-home__platform__nav__item_06 {background-position-x: 54.8%;}
+.ecui-home__platform__nav__item_07 {background-position-x: 65.8%;}
+.ecui-home__platform__nav__item_08 {background-position-x: 76.7%;}
+.ecui-home__platform__nav__item_09 {background-position-x: 87.7%;}
+.ecui-home__platform__nav__item_10 {background-position-x: 99%;}
+
+@media (max-width: 640px) {
+    .ecui-home__platform__nav__prev,
+    .ecui-home__platform__nav__next {
+        display: inline-block;
+    }
+    .ecui-home__platform__nav__item {
+        width: 60px;
+        height: 24px;
+        background-size: 713.4px;
+    }
+}

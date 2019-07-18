@@ -5,9 +5,10 @@
         </video>
     </div>
     <div class="ecui-home__gift__bd">
-        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">50,520</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">120,522,321</span>在线Listing</p>
+        <p class="ecui-home__gift__title">刊登Listing帮助超过<span class="ecui-home__gift__numb">10万+</span>店铺上架产品，同时刊登超过<span class="ecui-home__gift__numb">8000万+</span>在线Listing</p>
         <p class="ecui-home__gift__desc">只需注册易仓刊登Listing账户，卖家即可在线管理eBay，Amazon，Wish，Aliexpress等平台商品 - 易仓刊登真正实现一套产品资料快速高效刊登至各大主流平台</p>
-        <a class="ecui-home__gift__btn" href="javascript:;">立即开始14天免费体验</a>
+
+        <a class="ecui-home__gift__btn" href="javascript:;">立即免费体验</a>
     </div>
 </div>
 
@@ -19,6 +20,12 @@
         if (scrollTop > giftTop) {
             $(window).off('scroll.cl.ecui-home__gift')
             $('.ecui-home__gift__numb').leoTextAnimate({delay: 200, autorun: true, fixed: [',',':','.'], start: '0'});
+        }
+    }).on('resize', function() {
+        if ($(window).width() > 640) {
+            $('.ecui-home__gift__desc').show()
+        } else {
+            $('.ecui-home__gift__desc').hide()
         }
     })
 </script>

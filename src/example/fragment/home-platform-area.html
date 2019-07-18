@@ -1,3 +1,4 @@
+
 <div class="ecui-home__platform-area">
     <div class="ecui-home__platform-area__bg">
         <img src="./common/img/home/home_platform_bg.png" alt="">
@@ -6,11 +7,16 @@
         <p class="ecui-home__platform-area__title">支持<span class="ecui-home__platform-area__numb">10+</span>平台，主流站点刊登</p>
     </div>
     <div class="ecui-home__platform-area__bd">
-        <div class="ecui-platform">
+        <div class="ecui-home__platform">
             <div class="ecui-home__platform__panel">
                 <!-- point list -->
+                <img src="./common/img/home/home_platform_map.png" alt="">
+                <span class="ecui-home__platform__title">不区分站点</span>
             </div>
             <div class="ecui-home__platform__nav">
+                <a class="ecui-home__platform__nav__prev">
+                    <i class="ecui-icon-arrow-left"></i>
+                </a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_01" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_02" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_03" href="javascript:;"></a>
@@ -21,6 +27,9 @@
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_08" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_09" href="javascript:;"></a>
                 <a class="ecui-home__platform__nav__item ecui-home__platform__nav__item_10" href="javascript:;"></a>
+                <a class="ecui-home__platform__nav__next">
+                    <i class="ecui-icon-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -30,68 +39,72 @@
 <script>
     var pointList = [
         [
-            { name: '加拿大', top: 52, left: 176 },
-            { name: '美国', top: 117, left:226 },
-            { name: '爱尔兰', top: 45, left: 450 },
-            { name: '英国', top: 56, left: 465 },
-            { name: '西班牙', top: 87, left: 479 },
-            { name: '比利时', top: 58, left: 496 },
-            { name: '意大利', top: 100, left: 523 },
-            { name: '法国', top: 76, left: 528 },
-            { name: '荷兰', top: 47, left: 536 },
-            { name: '德国', top: 65, left: 550 },
-            { name: '波兰', top: 56, left: 550 },
-            { name: '印度', top: 175, left: 706 },
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '香港', top: 172, left: 815 },
-            { name: '菲律宾', top: 254, left: 893 },
-            { name: '澳大利亚', top: 363, left: 923 },
+            { name: '加拿大', top: 102, left: 226 },
+            { name: '美国', top: 167, left: 276 },
+            { name: '爱尔兰', top: 95, left: 500 },
+            { name: '英国', top: 106, left: 515 },
+            { name: '西班牙', top: 137, left: 529 },
+            { name: '比利时', top: 108, left: 546 },
+            { name: '意大利', top: 150, left: 573 },
+            { name: '法国', top: 126, left: 578 },
+            { name: '荷兰', top: 97, left: 586 },
+            { name: '德国', top: 115, left: 600 },
+            { name: '波兰', top: 106, left: 600 },
+            { name: '印度', top: 225, left: 756 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '香港', top: 222, left: 865 },
+            { name: '菲律宾', top: 304, left: 933 },
+            { name: '澳大利亚', top: 413, left: 973 },
         ],
         [
-            { name: '加拿大', top: 52, left: 176 },
-            { name: '美国', top: 117, left:226 },
-            { name: '英国', top: 56, left: 465 },
-            { name: '西班牙', top: 87, left: 479 },
-            { name: '意大利', top: 100, left: 523 },
-            { name: '法国', top: 76, left: 528 },
-            { name: '德国', top: 65, left: 550 },
-            { name: '日本', top: 112, left: 905 },
-            { name: '澳大利亚', top: 363, left: 923 },
-        ],
-        [ ],
-        [ ],
-        [
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '泰国', top: 178, left: 779 },
-            { name: '越南', top: 197, left: 807 },
-            { name: '印尼', top: 257, left: 830 },
-            { name: '菲律宾', top: 254, left: 893 },
-        ],
-        [
-            { name: '泰国', top: 178, left: 779 },
-            { name: '越南', top: 197, left: 807 },
-            { name: '马来西亚', top: 250, left: 787 },
-            { name: '新加坡', top: 266, left: 803 },
-            { name: '印尼', top: 257, left: 830 },
-            { name: '菲律宾', top: 254, left: 893 },
-            { name: '台湾', top: 157, left: 842 },
+            { name: '加拿大', top: 102, left: 226 },
+            { name: '美国', top: 167, left: 276 },
+            { name: '英国', top: 106, left: 515 },
+            { name: '西班牙', top: 137, left: 529 },
+            { name: '意大利', top: 150, left: 573 },
+            { name: '法国', top: 126, left: 578 },
+            { name: '德国', top: 115, left: 600 },
+            { name: '日本', top: 162, left: 955 },
+            { name: '澳大利亚', top: 413, left: 973 },
         ],
         [ ],
+        [ ],
         [
-            { name: '美国', top: 117, left:226 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '泰国', top: 228, left: 829 },
+            { name: '越南', top: 247, left: 857 },
+            { name: '印尼', top: 307, left: 880 },
+            { name: '菲律宾', top: 304, left: 943 },
+        ],
+        [
+            { name: '泰国', top: 228, left: 829 },
+            { name: '越南', top: 247, left: 857 },
+            { name: '马来西亚', top: 300, left: 837 },
+            { name: '新加坡', top: 316, left: 853 },
+            { name: '印尼', top: 307, left: 880 },
+            { name: '菲律宾', top: 304, left: 943 },
+            { name: '台湾', top: 207, left: 892 },
+        ],
+        [ ],
+        [
+            { name: '美国', top: 167, left:276 },
         ]
     ]
-    $('.ecui-home__platform-area').on('click', '.ecui-home__platform__nav__item', function () {
-        $(this).addClass('ecui-home__platform__nav__item_active')
-            .siblings().removeClass('ecui-home__platform__nav__item_active')
-        
-        $('.ecui-home__platform__panel').html('')
-        if (pointList[$(this).index()] && pointList[$(this).index()].length) {
-            $.each(pointList[$(this).index()] || [], function (index, item) {
+    var pointPage = 0
+    var pointIndex = 0
+    function initPoint() {
+        var current = pointList[pointIndex]
+
+        $('.ecui-home__platform__panel').html('<img src="./common/img/home/home_platform_map.png" alt="">')
+        if (current && current.length) {
+            var scale = $('.ecui-home__platform__panel').width() / 1100
+            $.each(current || [], function (index, item) {
+                var top = item.top * scale - 50
+                var left = item.left * scale - 50
                 $([
-                    '<div class="ecui-home__platform__point" style="top:56px;left:465px;">',
+                    '<div class="ecui-home__platform__point">',
                         '<span class="ecui-home__platform__point__name">',
                             item.name,
                         '</span>',
@@ -101,14 +114,45 @@
                         '<i class="ecui-point ecui-point_7 ecui-point_shadow"></i>',
                     '</div>'
                 ].join(''))
-                    .css({ top: item.top, left: item.left })
+                    .css({ top: top, left: left })
                     .appendTo($('.ecui-home__platform__panel'))
             })
         } else {
-            $('<span>不区分站点</span>')
-                .css({ marginTop: -112, width: '100%', fontSize: 140, fontWeight: 700, color: 'rgba(255,255,255,.15)', textAlign: 'center', position: 'absolute', top: '40%', left: '0' })
+            $('<span class="ecui-home__platform__title">不区分站点</span>')
                 .appendTo($('.ecui-home__platform__panel'))
         }
+    }
+    function initPointPage() {
+        var index = pointPage * 4
+        $('.ecui-home__platform__nav__item').hide()
+        $('.ecui-home__platform__nav__item').eq(index + 0).show()
+        $('.ecui-home__platform__nav__item').eq(index + 1).show()
+        $('.ecui-home__platform__nav__item').eq(index + 2).show()
+        $('.ecui-home__platform__nav__item').eq(index + 3).show()
+    }
+    $('.ecui-home__platform-area').on('click', '.ecui-home__platform__nav__item', function () {
+        pointIndex = $(this).index()
+        $(this).addClass('ecui-home__platform__nav__item_active')
+            .siblings().removeClass('ecui-home__platform__nav__item_active')
+            initPoint()
+    }).on('click', '.ecui-home__platform__nav__prev', function () {
+        pointPage = pointPage - 1 >= 0 ? pointPage - 1 : 0
+        initPointPage()
+    }).on('click', '.ecui-home__platform__nav__next', function () {
+        pointPage = pointPage + 1 <= 2 ? pointPage + 1 : 2
+        initPointPage()
     })
-    .find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
+
+    // init event
+    $('.ecui-home__platform-area').find('.ecui-home__platform__nav__item:eq(0)').trigger('click')
+
+    $(window).resize(function () {
+        initPoint()
+
+        if ($(window).width() > 640) {
+            $('.ecui-home__platform__nav__item').show()
+        } else {
+            initPointPage()
+        }
+    })
 </script>

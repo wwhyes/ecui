@@ -28,3 +28,28 @@
         line-height: 26px;
     }
 }
+
+@media (max-width: 640px) {
+    .ecui-footer__info {
+        width: auto;
+    }
+
+    .ecui-footer__info,
+    .ecui-footer__qrcode {
+        display: none;
+
+        .ecui-flex__item & {
+            display: block;
+        }
+    }
+
+    .ecui-footer__info__hd {
+        display: none;
+    }
+
+    .ecui-footer__info__bd {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
